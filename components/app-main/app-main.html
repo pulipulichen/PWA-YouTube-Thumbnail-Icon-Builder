@@ -2,46 +2,56 @@
 
   <div class="ui segment">
     
-    <div class="field">
-      <label>
-        YouTube Video URL
-      </label>
-      <input type="url" v-model="YouTubeURL" />
-    </div>
-    
     <div class="two fields">
       <div class="field">
         <label>
-          Icon URL
+          Image URL (include YouTube Video URL)
         </label>
-        <input type="url" v-model="iconURL" />
+        <input type="url" v-model="YouTubeURL" />
 
         <label>
-          Preset ICON list
+          Image Horizontal Percentage ({{ youtubeHorizontalPercentage }}%)
         </label>
-        <div class="preset-icons">
-          <img v-for="url in presetIcons" v-bind:src="url"
-               v-on:click="iconURL = url" />
-        </div>
-      </div>
-      
-      <div class="field">
-        <label>
-          Icon Position
-        </label>
-        <div class="icon-position-selector">
-          <template v-for="pos in iconPositionList"><span v-on:click="iconPosition = pos"
-              v-bind:class="{selected: (pos === iconPosition)}"
-              >{{ pos }}</span><br v-if="pos === 9 || pos === 6" /></template>
-        </div>
-
-        <label>
-          Icon Padding Percentage ({{ iconPaddingPercentage }}%)
-        </label>
-        <input type="range" min="0" max="100" v-model="iconPaddingPercentage">
+        <input type="range" step="10" min="0" max="100" v-model="youtubeHorizontalPercentage">
       </div>
 
+      <div class="two fields">
+        <div class="field">
+          <label>
+            Icon URL
+          </label>
+          <input type="url" v-model="iconURL" />
+
+          <label>
+            Preset ICON list
+          </label>
+          <div class="preset-icons">
+            <img v-for="url in presetIcons" v-bind:src="url"
+                 v-on:click="iconURL = url" />
+          </div>
+        </div>
+        
+        <div class="field">
+          <label>
+            Icon Position
+          </label>
+          <div class="icon-position-selector">
+            <template v-for="pos in iconPositionList"><span v-on:click="iconPosition = pos"
+                v-bind:class="{selected: (pos === iconPosition)}"
+                >{{ pos }}</span><br v-if="pos === 9 || pos === 6" /></template>
+          </div>
+
+          <label>
+            Icon Padding Percentage ({{ iconPaddingPercentage }}%)
+          </label>
+          <input type="range" step="10" min="0" max="100" v-model="iconPaddingPercentage">
+        </div>
+
+      </div>
     </div>
+      
+    
+      
     
     <div class="field output">
       <canvas id="canvas" width="512" height="512">

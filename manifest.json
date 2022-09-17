@@ -1,11 +1,11 @@
 {
-  "name": "HTML Book Search",
-  "short_name": "BookSearch",
+  "name": "Icon Builder",
+  "short_name": "IconBuilder",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#3498DB",
   "theme_color": "#2980B9",
-  "description": "Searching several book shopping websites from a form.",
+  "description": "Convert a image to a square icon.",
   "icons": [{
    "src": "assets/favicon/icon/android-icon-36x36.png",
    "sizes": "36x36",
