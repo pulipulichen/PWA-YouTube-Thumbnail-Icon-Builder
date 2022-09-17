@@ -182,7 +182,10 @@ let appMain = {
 
         context.drawImage(drawing, left, top, resizedWidth, resizedHeight);
 
-        drawMusicIcon()
+        if (this.iconPosition !== 0) {
+          drawMusicIcon()
+        }
+        
         //console.log('go')
       }
 

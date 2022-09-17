@@ -38,7 +38,11 @@
           <div class="icon-position-selector">
             <template v-for="pos in iconPositionList"><span v-on:click="iconPosition = pos"
                 v-bind:class="{selected: (pos === iconPosition)}"
-                >{{ pos }}</span><br v-if="pos === 9 || pos === 6" /></template>
+                >{{ pos }}</span><br v-if="pos === 9 || pos === 6 || pos === 3" /></template>
+            <span v-on:click="iconPosition = 0"
+                v-bind:class="{selected: (0 === iconPosition)}"
+                class="hidden-button"
+                >Hidden</span>
           </div>
 
           <label>
