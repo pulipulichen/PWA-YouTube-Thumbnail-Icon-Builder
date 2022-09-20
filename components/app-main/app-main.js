@@ -23,7 +23,8 @@ let appMain = {
       presetIcons: [
         'https://cdn-icons-png.flaticon.com/512/1895/1895657.png',
         'https://cdn-icons-png.flaticon.com/512/3293/3293810.png',
-        'https://cdn-icons-png.flaticon.com/512/3293/3293822.png'
+        'https://cdn-icons-png.flaticon.com/512/3293/3293822.png',
+        'https://cdn.iconscout.com/icon/free/png-256/logo-127-116266.png'
       ]
     }
   },
