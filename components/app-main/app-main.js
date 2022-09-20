@@ -193,6 +193,8 @@ let appMain = {
       let drawMusicIcon = () => {
         let iconDrawing = new Image()
         iconDrawing.src = this.iconURL; // can also be a remote URL e.g. http://
+        iconDrawing.width = 512
+        iconDrawing.height = 512
         iconDrawing.onload = () => {
           let {height, width} = iconDrawing
           let resizedHeight = height
