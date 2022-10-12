@@ -24,7 +24,11 @@ let appMain = {
         'https://cdn-icons-png.flaticon.com/512/1895/1895657.png',
         'https://cdn-icons-png.flaticon.com/512/3293/3293810.png',
         'https://cdn-icons-png.flaticon.com/512/3293/3293822.png',
-        'https://cdn.iconscout.com/icon/free/png-256/logo-127-116266.png'
+        'https://cdn.iconscout.com/icon/free/png-256/logo-127-116266.png',
+        'https://blogger.googleusercontent.com/img/a/AVvXsEjTPFZczYG4fmpoPDVISoxJZ_xNOLCDXm-pryNsS7igZ3mrZP9I654mf3hmqiuXBw6xW_G_m24RlsoddwnUM7XZ8YTEAGf_u0iM4RaXPr6LCk_r7iwF34LfDpbk3akuDLU-I1muTD-OtAlR0OdF9q1ppa-n8admztfrBsc2EPTjq8r5I0RATqI',
+        'https://lh3.googleusercontent.com/-f6XuWkPsrEk/Ycq9X8RiDuI/AAAAAAAFEVQ/BYUhx02M45UMVbt3LpwvHUdBP8t-WiVjQCNcBGAsYHQ/s1600/slides-icon-6-yellow.jpg',
+        'https://lh3.googleusercontent.com/-KggvrRwyGXA/YVk8ocMehyI/AAAAAAAFBpI/beeiCgBqKQQL6RVG-8DCV6-2D-afb6J0ACLcBGAsYHQ/s1600/sheet-blue-Alecive-Flatwoken-Apps-Google-Drive-Forms.png',
+        'https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png'
       ]
     }
   },
@@ -76,9 +80,11 @@ let appMain = {
   },
   watch: {
     thumbnailURL () {
+      // this.clearIcon()
       this.drawIconLazy()
     },
     iconURL () {
+      // this.clearIcon()
       this.drawIconLazy()
     },
     iconPaddingPercentage () {
@@ -138,12 +144,19 @@ let appMain = {
         this.drawIcon()
       }, 0)
     },
+    clearIcon () {
+      // this.dataSave()
+      let canvas=document.getElementById("canvas");
+      let context=canvas.getContext('2d');
+
+      context.clearRect(0, 0, canvas.width, canvas.height)
+    },
     drawIcon () {
       this.dataSave()
       let canvas=document.getElementById("canvas");
       let context=canvas.getContext('2d');
 
-      //context.clearRect(0, 0, canvas.width, canvas.height)
+      context.clearRect(0, 0, canvas.width, canvas.height)
 
       let drawing = new Image();
       drawing.src = this.thumbnailURL; // can also be a remote URL e.g. http://
