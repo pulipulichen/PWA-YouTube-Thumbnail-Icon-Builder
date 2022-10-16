@@ -29,8 +29,7 @@ let appMain = {
         'https://lh3.googleusercontent.com/-f6XuWkPsrEk/Ycq9X8RiDuI/AAAAAAAFEVQ/BYUhx02M45UMVbt3LpwvHUdBP8t-WiVjQCNcBGAsYHQ/s1600/slides-icon-6-yellow.jpg',
         'https://lh3.googleusercontent.com/-KggvrRwyGXA/YVk8ocMehyI/AAAAAAAFBpI/beeiCgBqKQQL6RVG-8DCV6-2D-afb6J0ACLcBGAsYHQ/s1600/sheet-blue-Alecive-Flatwoken-Apps-Google-Drive-Forms.png',
         'https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png',
-        'https://play-lh.googleusercontent.com/II4dMBDv1qdEch5IE5HFynsYqL-pw7cUQDgHvXUWiMUDVJnrgxEdB2v-L-HaeNnCNw',
-
+        
         // gitmind
         'https://blogger.googleusercontent.com/img/a/AVvXsEg7qmOiY-BpThdQyDICyJX6ow9vvyMhA0Ni-IKV0EogcElC7rfLiIU2pZDX1LqPhyo1UcGs6cbYDljBhmWrTC2aoM_5ntjQ0LvzWfvAvTdV4NHesgCD-Zfo4R02AxrHb-JofeZ-3IHckUoVRdIDYqjTntJDn6jax85FgAyuapWz2ZtQBEH94u0'
       ]
