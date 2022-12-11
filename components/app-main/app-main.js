@@ -31,7 +31,10 @@ let appMain = {
         'https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png',
         
         // gitmind
-        'https://blogger.googleusercontent.com/img/a/AVvXsEg7qmOiY-BpThdQyDICyJX6ow9vvyMhA0Ni-IKV0EogcElC7rfLiIU2pZDX1LqPhyo1UcGs6cbYDljBhmWrTC2aoM_5ntjQ0LvzWfvAvTdV4NHesgCD-Zfo4R02AxrHb-JofeZ-3IHckUoVRdIDYqjTntJDn6jax85FgAyuapWz2ZtQBEH94u0'
+        'https://blogger.googleusercontent.com/img/a/AVvXsEg7qmOiY-BpThdQyDICyJX6ow9vvyMhA0Ni-IKV0EogcElC7rfLiIU2pZDX1LqPhyo1UcGs6cbYDljBhmWrTC2aoM_5ntjQ0LvzWfvAvTdV4NHesgCD-Zfo4R02AxrHb-JofeZ-3IHckUoVRdIDYqjTntJDn6jax85FgAyuapWz2ZtQBEH94u0',
+
+        // koha
+        'https://blogger.googleusercontent.com/img/a/AVvXsEjXTYuZEyZm_TWDzcl-tyKwz7EQC1jBv6uO3VAVJEb9TkXKL_V3Vbk6eINetsWetrgtDXq2vY3U9tRcj_mnHxuOOPGICoPKQr9mBtcVlyAcN1hnsPCABnAKN7DYQxOscJAj-jIq2caJjKPxbTdSG1MN3hbRjU8DvEkqOVG22U5iFrnLYNHX1v0',
       ]
     }
   },
