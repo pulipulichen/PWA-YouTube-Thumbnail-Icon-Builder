@@ -7,7 +7,7 @@ let appMain = {
     
     return {
       cacheKey: 'YouTube-Thumbnail-Icon',
-      cacheAttrs: ['YouTubeURL', 'iconURL', 'youtubeHorizontalPercentage', 'iconPaddingPercentage', 'iconPosition'],
+      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'iconPaddingPercentage', 'iconPosition'],
       init: false,
       
       YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
@@ -19,6 +19,12 @@ let appMain = {
       iconPositionList: [7,8,9,4,5,6,1,2,3],
       canvaseBase64: '',
       drawIconLazyTimer: null,
+
+      HistoryYouTubeURL: [],
+      HistoryIconURL: [],
+
+      selectHistoryYouTubeURL: ``,
+      selectHistoryIconURL: ``,
 
       presetIcons: [
         'https://cdn-icons-png.flaticon.com/512/1895/1895657.png',
@@ -88,10 +94,39 @@ let appMain = {
     thumbnailURL () {
       // this.clearIcon()
       this.drawIconLazy()
+
+      let url = this.YouTubeURL
+      if (this.HistoryYouTubeURL.indexOf(url) === -1) {
+        this.HistoryYouTubeURL.unshift(url)
+
+        if (this.HistoryYouTubeURL.length > 10) {
+          this.HistoryYouTubeURL = this.HistoryYouTubeURL.slice(0, 10)
+        }
+      }
+      else {
+        this.HistoryYouTubeURL = this.HistoryYouTubeURL.filter(item => item !== url)
+        this.HistoryYouTubeURL.unshift(url)
+      }
     },
-    iconURL () {
+    iconURL (url) {
       // this.clearIcon()
       this.drawIconLazy()
+
+      if (this.presetIcons.indexOf(url) > -1) {
+        return false
+      }
+
+      if (this.HistoryIconURL.indexOf(url) === -1) {
+        this.HistoryIconURL.unshift(url)
+
+        if (this.HistoryIconURL.length > 10) {
+          this.HistoryIconURL = this.HistoryIconURL.slice(0, 10)
+        }
+      }
+      else {
+        this.HistoryIconURL = this.HistoryIconURL.filter(item => item !== url)
+        this.HistoryIconURL.unshift(url)
+      }
     },
     iconPaddingPercentage () {
       this.drawIconLazy()
@@ -101,6 +136,23 @@ let appMain = {
     },
     youtubeHorizontalPercentage () {
       this.drawIconLazy()
+    },
+
+    selectHistoryYouTubeURL (url) {
+      if (url === '') {
+        return false
+      }
+
+      this.YouTubeURL = url
+      this.selectHistoryYouTubeURL = ''
+    },
+    selectHistoryIconURL (url) {
+      if (url === '') {
+        return false
+      }
+
+      this.iconURL = url
+      this.selectHistoryIconURL = ''
     }
   },
   methods: {
@@ -315,6 +367,14 @@ let appMain = {
       ctx.clip();
       ctx.clearRect(0, 0, 512, 512);
       ctx.save();
+    },
+    displayItem (url) {
+      if (url.length > 50) {
+        let head = url.slice(0, 20)
+        let foot = url.slice(-30)
+        return head + '...' + foot
+      }
+      return url
     }
   }
 }

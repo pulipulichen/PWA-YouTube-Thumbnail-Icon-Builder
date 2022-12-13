@@ -2,7 +2,7 @@
 
   <div class="ui segment">
     
-    <div class="two fields">
+    <div class="three fields">
       <div class="field">
         <label>
           Image URL (include YouTube Video URL)
@@ -13,9 +13,13 @@
           Image Horizontal Percentage ({{ youtubeHorizontalPercentage }}%)
         </label>
         <input type="range" step="10" min="0" max="100" v-model="youtubeHorizontalPercentage">
+
+        <div class="preset-icons history-icon">
+          <img v-for="url in HistoryYouTubeURL" v-bind:src="url"
+               v-on:click="iconURL = url" />
+        </div>
       </div>
 
-      <div class="two fields">
         <div class="field">
           <label>
             Icon URL
@@ -27,6 +31,11 @@
           </label>
           <div class="preset-icons">
             <img v-for="url in presetIcons" v-bind:src="url"
+                 v-on:click="iconURL = url" />
+          </div>
+
+          <div class="preset-icons history-icon">
+            <img v-for="url in HistoryIconURL" v-bind:src="url"
                  v-on:click="iconURL = url" />
           </div>
         </div>
@@ -49,10 +58,12 @@
             Icon Padding Percentage ({{ iconPaddingPercentage }}%)
           </label>
           <input type="range" step="10" min="0" max="100" v-model="iconPaddingPercentage">
+          <div>
+            <a class="ui button" href="https://www.favicon-generator.org/" target="_blank">Favicon Generator</a>
+          </div>
         </div>
 
       </div>
-    </div>
       
     
       
