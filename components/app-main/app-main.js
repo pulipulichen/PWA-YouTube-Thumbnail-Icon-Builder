@@ -41,7 +41,10 @@ let appMain = {
 
         // koha
         'https://blogger.googleusercontent.com/img/a/AVvXsEjXTYuZEyZm_TWDzcl-tyKwz7EQC1jBv6uO3VAVJEb9TkXKL_V3Vbk6eINetsWetrgtDXq2vY3U9tRcj_mnHxuOOPGICoPKQr9mBtcVlyAcN1hnsPCABnAKN7DYQxOscJAj-jIq2caJjKPxbTdSG1MN3hbRjU8DvEkqOVG22U5iFrnLYNHX1v0',
-      ]
+      ],
+
+      imgbbHTML: '',
+      
     }
   },
   mounted () {
@@ -88,6 +91,16 @@ let appMain = {
         '-' + this.iconFilename + 
         '-' + this.iconPosition + this.iconPaddingPercentage +
         '.png'
+    },
+    imgbbHTMLoutput () {
+      if (this.imgbbHTML.indexOf('src="') === -1) {
+        return false
+      }
+
+      let pos1 = this.imgbbHTML.indexOf('src="') + 5
+      let pos2 = this.imgbbHTML.indexOf('"', pos1 + 1)
+
+      return this.imgbbHTML.slice(pos1, pos2)
     }
   },
   watch: {

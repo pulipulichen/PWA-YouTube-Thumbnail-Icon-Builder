@@ -88,6 +88,14 @@
   <div class="ui equal width grid">
     <div class="column">
       <iframe src="https://zh-tw.imgbb.com/"></iframe>
+
+      <div class="fields">
+        <input type="text" v-model="imgbbHTML" placeholder="HTML..." />
+      </div>
+      <div class="fields">
+        <input type="text" :value="imgbbHTMLoutput" placeholder="HTML output..."
+          @focus="this.select()" />
+      </div>
     </div>
     <div class="column">
       <iframe src="https://pulipulichen.github.io/Chrome-Shortcut-Head-Modifier/index.html"></iframe>
