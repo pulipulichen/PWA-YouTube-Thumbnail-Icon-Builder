@@ -90,15 +90,20 @@
       <iframe src="https://zh-tw.imgbb.com/"></iframe>
 
       <div class="fields">
-        <input type="text" v-model="imgbbHTML" placeholder="HTML..." />
-      </div>
-      <div class="fields">
-        <input type="text" :value="imgbbHTMLoutput" placeholder="HTML output..."
-          @focus="this.select()" />
+        <div class="eight wide field">
+          <input type="text" v-model="imgbbHTML" placeholder="HTML..." />
+        </div>
+        <div class="eight wide field">
+          <input type="text" :value="imgbbHTMLoutput" placeholder="HTML output..."
+            onfocus="this.select()" />
+        </div>
       </div>
     </div>
     <div class="column">
       <iframe src="https://pulipulichen.github.io/Chrome-Shortcut-Head-Modifier/index.html"></iframe>
+    </div>
+    <div class="column">
+      <iframe src="https://coolors.co/palettes/popular/warm"></iframe>
     </div>
   </div>
   

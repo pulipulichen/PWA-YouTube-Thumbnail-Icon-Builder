@@ -94,7 +94,7 @@ let appMain = {
     },
     imgbbHTMLoutput () {
       if (this.imgbbHTML.indexOf('src="') === -1) {
-        return false
+        return ''
       }
 
       let pos1 = this.imgbbHTML.indexOf('src="') + 5
