@@ -44,6 +44,10 @@ let appMain = {
 
         // koha
         'https://blogger.googleusercontent.com/img/a/AVvXsEjXTYuZEyZm_TWDzcl-tyKwz7EQC1jBv6uO3VAVJEb9TkXKL_V3Vbk6eINetsWetrgtDXq2vY3U9tRcj_mnHxuOOPGICoPKQr9mBtcVlyAcN1hnsPCABnAKN7DYQxOscJAj-jIq2caJjKPxbTdSG1MN3hbRjU8DvEkqOVG22U5iFrnLYNHX1v0',
+
+        // letters
+        'https://blogger.googleusercontent.com/img/a/AVvXsEh6z_USX241_RnMqb86RSHQ53Ph1EVwklcEPSqmyNygh_ft0VVYvWTtrB7ICbyRzL6-D0qbvziWThvojG2iSTtFATBK6rEX6gSiWzlHx8zz7ZgreBkIMKOmyJ6afH64VWEtnbYJqITfKVifhmGj7vQXPCtlIT1tKSUK2B0h4VgoAECkl669hsI',
+        'https://blogger.googleusercontent.com/img/a/AVvXsEgz9_9UUcpiyuYwm_FIrSnrlfq09Llw2sPxP4Pp2bdL3BJISbgw72xOCD1dS-iF3fNWybnhNcXtGIjQAifVRbL4k3N2OBJQRGL33RiSc2afBy4hNtWTTepj0fk8kL65zN3yMfsWoci8CwKaRu_z2R3jlY5Bp7VN4xkwP-ENzXnDb-xuhTjWV5I'
       ],
 
       imgbbHTML: '',
