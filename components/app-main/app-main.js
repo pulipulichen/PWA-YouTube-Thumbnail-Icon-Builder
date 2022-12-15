@@ -7,7 +7,7 @@ let appMain = {
     
     return {
       cacheKey: 'YouTube-Thumbnail-Icon',
-      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'iconPaddingPercentage', 'iconPosition'],
+      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition'],
       init: false,
       
       YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
@@ -19,6 +19,9 @@ let appMain = {
       iconPositionList: [7,8,9,4,5,6,1,2,3],
       canvaseBase64: '',
       drawIconLazyTimer: null,
+
+      youtubeHueRotateDegree: 0,
+      iconHueRotateDegree: 0,
 
       HistoryYouTubeURL: [],
       HistoryIconURL: [],
@@ -151,6 +154,13 @@ let appMain = {
       this.drawIconLazy()
     },
 
+    youtubeHueRotateDegree () {
+      this.drawIconLazy()
+    },
+    iconHueRotateDegree () {
+      this.drawIconLazy()
+    },
+
     selectHistoryYouTubeURL (url) {
       if (url === '') {
         return false
@@ -267,6 +277,11 @@ let appMain = {
 
         context.drawImage(drawing, left, top, resizedWidth, resizedHeight);
 
+        if (this.iconHueRotateDegree !== 0 && this.iconHueRotateDegree !== 360) {
+          context.filter = `hue-rotate(${this.iconHueRotateDegree}deg)`;
+        }
+          
+
         if (this.iconPosition !== 0) {
           drawMusicIcon()
         }
@@ -380,6 +395,31 @@ let appMain = {
       ctx.clip();
       ctx.clearRect(0, 0, 512, 512);
       ctx.save();
+    },
+    hueRotate(rotation) {
+      rotation = (rotation || 0) / 180 * Math.PI;
+      var cosR = Math.cos(rotation),
+        sinR = Math.sin(rotation),
+        sqrt = Math.sqrt;
+    
+      var w = 1 / 3,
+        sqrW = sqrt(w);
+      var a00 = cosR + (1.0 - cosR) * w;
+      var a01 = w * (1.0 - cosR) - sqrW * sinR;
+      var a02 = w * (1.0 - cosR) + sqrW * sinR;
+      var a10 = w * (1.0 - cosR) + sqrW * sinR;
+      var a11 = cosR + w * (1.0 - cosR);
+      var a12 = w * (1.0 - cosR) - sqrW * sinR;
+      var a20 = w * (1.0 - cosR) - sqrW * sinR;
+      var a21 = w * (1.0 - cosR) + sqrW * sinR;
+      var a22 = cosR + w * (1.0 - cosR);
+      var matrix = [
+        a00, a01, a02, 0, 0,
+        a10, a11, a12, 0, 0,
+        a20, a21, a22, 0, 0,
+        0, 0, 0, 1, 0,
+      ];
+      return matrix.join(' ');
     },
     displayItem (url) {
       if (url.length > 50) {
