@@ -89,21 +89,41 @@
     <div class="column">
       <iframe src="https://zh-tw.imgbb.com/"></iframe>
 
-      <div class="fields">
-        <div class="eight wide field">
+      <div class="ui equal width grid">
+        <div class="column field">
           <input type="text" v-model="imgbbHTML" placeholder="HTML..." />
         </div>
-        <div class="eight wide field">
+        <div class="column field">
           <input type="text" :value="imgbbHTMLoutput" placeholder="HTML output..."
             onfocus="this.select()" />
         </div>
+        <a class="column field preview"
+          :href="imgbbHTMLoutput"
+          target="_blank"
+          v-if="imgbbHTMLoutput">
+          <img :src="imgbbHTMLoutput" />
+        </a>
       </div>
     </div>
     <div class="column">
       <iframe src="https://pulipulichen.github.io/Chrome-Shortcut-Head-Modifier/index.html"></iframe>
     </div>
+  </div>
+
+  <div class="ui equal width grid">
     <div class="column">
-      <iframe src="https://coolors.co/palettes/popular/warm"></iframe>
+      <a href="https://coolors.co/palettes/popular/warm"
+        class="ui fluid button"
+        @click.prevent.stop="popup('https://coolors.co/palettes/popular/warm')">
+        Warm Colors
+      </a>
+    </div>
+    <div class="column">
+      <a href="https://color.adobe.com/create/image"
+        class="ui fluid button"
+        @click.prevent.stop="popup('https://color.adobe.com/create/image')">
+        Extract Color from Image
+      </a>
     </div>
   </div>
   

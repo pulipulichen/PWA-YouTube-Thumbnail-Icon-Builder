@@ -388,6 +388,16 @@ let appMain = {
         return head + '...' + foot
       }
       return url
+    },
+    popup (url) {
+
+      var popup = window.open(url, '_blank', "width="+screen.availWidth+",height="+screen.availHeight);
+      if (popup == null)
+         alert('Please change your popup settings');
+      else  {
+        popup.moveTo(0, 0);
+        // popup.resizeTo(screen.availWidth, screen.availHeight);
+      }
     }
   }
 }
