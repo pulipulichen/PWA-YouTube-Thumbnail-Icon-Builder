@@ -53,7 +53,13 @@ let appMain = {
         'https://blogger.googleusercontent.com/img/a/AVvXsEhAfwdBxjcTbZIgQSQRNds-2GqmqZX9AGTPSi64I5u_F0JnWezuxXQnCI4ZX7kjdmWpD-vnsje6FxPF_4dg_896peNBKot8QAHDD1cK2CV5fs_Sl4gHyNDv3RC9TlI7Tm298vOtWHbUllanBGaS0b8pJYUVidGsydO2MiPMXz_phTTdiZFJgzQ',
         'https://cdn-icons-png.flaticon.com/512/8743/8743947.png',
         'https://cdn-icons-png.flaticon.com/512/4848/4848214.png',
-        'https://cdn-icons-png.flaticon.com/512/9196/9196262.png'
+        'https://cdn-icons-png.flaticon.com/512/9196/9196262.png',
+
+        // checkbox
+        'https://cdn-icons-png.flaticon.com/512/5583/5583108.png',
+
+        // blogger
+        'https://cdn-icons-png.flaticon.com/512/2673/2673669.png'
       ],
 
       imgbbHTML: '',
