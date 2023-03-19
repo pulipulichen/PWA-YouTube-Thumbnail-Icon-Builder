@@ -28,6 +28,30 @@
           </label>
           <input type="range" step="30" min="0" max="360" v-model="youtubeHueRotateDegree">
         </div>
+        <div class="inline field">
+          <label for="fitImage">
+            Fit Image
+          </label>
+          <input type="checkbox" id="fitImage" v-model="fitImage">
+        </div>
+        <div class="inline field">
+          <label for="setBackground">
+            Set Background
+          </label>
+          <input type="checkbox" id="setBackground" v-model="setBackground">
+        </div>
+        <div class="field">
+          <label>
+            Background Corner ({{ backgroundCornerRound * 100 }}%)
+          </label>
+          <input type="range" step="0.1" min="0" max="1" v-model="backgroundCornerRound">
+        </div>
+        <div class="field">
+          <label>
+            Background Color
+          </label>
+          <input type="text" v-model="backgroundColor" />
+        </div>
       </div>
       <div class="column">
         <div class="field">

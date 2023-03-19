@@ -7,7 +7,7 @@ let appMain = {
     
     return {
       cacheKey: 'YouTube-Thumbnail-Icon',
-      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition'],
+      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition'],
       init: false,
       
       YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
@@ -22,6 +22,11 @@ let appMain = {
 
       youtubeHueRotateDegree: 0,
       iconHueRotateDegree: 0,
+      fitImage: false,
+
+      setBackground: false,
+      backgroundCornerRound: 0.3,
+      backgroundColor: 'white',
 
       HistoryYouTubeURL: [],
       HistoryIconURL: [],
@@ -59,7 +64,8 @@ let appMain = {
         'https://cdn-icons-png.flaticon.com/512/5583/5583108.png',
 
         // blogger
-        'https://cdn-icons-png.flaticon.com/512/2673/2673669.png'
+        'https://cdn-icons-png.flaticon.com/512/2673/2673669.png',
+        'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
       ],
 
       imgbbHTML: '',
@@ -68,6 +74,7 @@ let appMain = {
   },
   mounted () {
     this.dataLoad()
+    this.initDropdown()
     
     this.inited = true
 
@@ -80,7 +87,10 @@ let appMain = {
       return this.YouTubeGetID(this.YouTubeURL)
     },
     thumbnailURL () {
-      if (!this.youtubeId || this.youtubeId.startsWith('http')) {
+      if (typeof(this.YouTubeURL) === 'string' && this.YouTubeURL.startsWith('data:image/')) {
+        return this.YouTubeURL
+      }
+      else if (!this.youtubeId || this.youtubeId.startsWith('http')) {
         return this.YouTubeURL
       }
       else {
@@ -164,6 +174,18 @@ let appMain = {
       this.drawIconLazy()
     },
     iconPosition () {
+      this.drawIconLazy()
+    },
+    fitImage () {
+      this.drawIconLazy()
+    },
+    setBackground () {
+      this.drawIconLazy()
+    },
+    backgroundCornerRound () {
+      this.drawIconLazy()
+    },
+    backgroundColor () {
       this.drawIconLazy()
     },
     youtubeHorizontalPercentage () {
@@ -257,6 +279,8 @@ let appMain = {
 
       let drawing = new Image();
       drawing.src = this.thumbnailURL; // can also be a remote URL e.g. http://
+      // console.log(drawing.src);
+
       drawing.onload = () => {
         let {height, width} = drawing
         let resizedHeight = height
@@ -268,28 +292,72 @@ let appMain = {
         //   resizedHeight = resizedHeight * (resizedWidth / width)
         //   top = (512 - resizedHeight) / 2
         // } 
-        if (resizedWidth > resizedHeight) {
-          // if (resizedHeight > 512) {
-            resizedHeight = 512
-            resizedWidth = resizedWidth * (resizedHeight / height)
-            //left = (512 - resizedWidth) / 2
+        if (this.fitImage === false) {
+          if (resizedWidth > resizedHeight) {
+            // if (resizedHeight > 512) {
+              resizedHeight = 512
+              resizedWidth = resizedWidth * (resizedHeight / height)
+              //left = (512 - resizedWidth) / 2
 
-            let maxLeft = 512 - resizedWidth
-            left = maxLeft * (this.youtubeHorizontalPercentage / 100)
-          // } 
+              let maxLeft = 512 - resizedWidth
+              left = maxLeft * (this.youtubeHorizontalPercentage / 100)
+            // } 
+          }
+          else {
+            // if (resizedWidth > 512) {
+              resizedWidth = 512
+              resizedHeight = resizedHeight * (resizedWidth / width)
+              //left = (512 - resizedWidth) / 2
+              
+
+              let max = 512 - resizedHeight
+              top = max * (this.youtubeHorizontalPercentage / 100)
+            // } 
+          }
         }
         else {
-          // if (resizedWidth > 512) {
-            resizedWidth = 512
-            resizedHeight = resizedHeight * (resizedWidth / width)
-            //left = (512 - resizedWidth) / 2
-            
+          if (resizedWidth < resizedHeight) {
+            // if (resizedHeight > 512) {
+              resizedHeight = 512
+              resizedWidth = resizedWidth * (resizedHeight / height)
+              //left = (512 - resizedWidth) / 2
 
-            let max = 512 - resizedHeight
-            top = max * (this.youtubeHorizontalPercentage / 100)
-          // } 
+              let maxLeft = 512 - resizedWidth
+              left = maxLeft / 2
+            // } 
+          }
+          else {
+            // if (resizedWidth > 512) {
+              resizedWidth = 512
+              resizedHeight = resizedHeight * (resizedWidth / width)
+              //left = (512 - resizedWidth) / 2
+              
+
+              let max = 512 - resizedHeight
+              top = max / 2
+            // } 
+          }
         }
         //console.log(left, top, resizedWidth, resizedHeight)
+
+        if (this.setBackground) {
+          // context.drawImage(drawing, left, top, resizedWidth, resizedHeight);  
+          // canvas.roundRectangle(0, 0, 512, 512, 30)
+          // canvas.fillRect(0,0,512,512)
+
+          let ctx = canvas.getContext('2d');
+          // ctx.restore();
+          ctx.clearRect(0, 0, canvas.width, canvas.height)
+          // alert('清除了沒？')
+          ctx.fillStyle = this.backgroundColor;
+          let radius = Math.round((512 / 2) * this.backgroundCornerRound)
+          // console.log(radius)
+          ctx.roundRect(0, 0, 512, 512, radius);
+          ctx.fill();
+          // ctx.save();
+
+          // alert('畫上去了喔')
+        }
 
         context.drawImage(drawing, left, top, resizedWidth, resizedHeight);
 
@@ -454,7 +522,67 @@ let appMain = {
         popup.moveTo(0, 0);
         // popup.resizeTo(screen.availWidth, screen.availHeight);
       }
-    }
+    },
+    initDropdown () {
+      window.addEventListener('dragstart', () => {
+        // console.log('dragstart')
+        this.isDragFromWindow = true
+      })
+  
+      window.addEventListener('dragenter', () => {
+        // console.log('dragenter')
+        if (this.isDragFromWindow === false) {
+          this.isDragging = true
+        }
+      })
+  
+      // window.addEventListener('mouseleave', () => {
+      //   console.log('mouseleave')
+      //   this.isDragging = false
+      // })
+  
+      // window.addEventListener('dragleave', () => {
+      //   console.log('dragleave')
+      //   this.isDragging = false
+      // })
+  
+      window.addEventListener('dragend', () => {
+        // console.log('dragend')
+        this.isDragFromWindow = false
+      })
+  
+      // console.log('okkk')
+  
+      document.body.addEventListener('dragover', (ev) => {
+        ev.preventDefault();
+      })
+  
+      document.body.addEventListener('dragenter', (ev) => {
+        ev.preventDefault();
+      })
+  
+      document.body.addEventListener('drop', (ev) => {
+        ev.preventDefault();
+        // console.log('okkk')
+        let blob = ev.dataTransfer.items[0].getAsFile()
+        // console.log(result)
+        var URLObj = window.URL || window.webkitURL;
+        let url = URLObj.createObjectURL(blob);
+
+        var xhr = new XMLHttpRequest();
+        xhr.onload = () => {
+          var reader = new FileReader();
+          reader.onloadend = () => {
+            this.YouTubeURL = reader.result
+          }
+          reader.readAsDataURL(xhr.response);
+        };
+        xhr.open('GET', url);
+        xhr.responseType = 'blob';
+        xhr.send();
+        // this.paste_createImage(source);
+      })
+    },
   }
 }
 
