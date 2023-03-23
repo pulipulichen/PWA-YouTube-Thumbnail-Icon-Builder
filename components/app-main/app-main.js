@@ -7,7 +7,7 @@ let appMain = {
     
     return {
       cacheKey: 'YouTube-Thumbnail-Icon',
-      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition'],
+      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'iconPadding', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition'],
       init: false,
       
       YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
@@ -23,6 +23,7 @@ let appMain = {
       youtubeHueRotateDegree: 0,
       iconHueRotateDegree: 0,
       fitImage: false,
+      iconPadding: 0,
 
       setBackground: false,
       backgroundCornerRound: 0.3,
@@ -185,6 +186,9 @@ let appMain = {
     backgroundCornerRound () {
       this.drawIconLazy()
     },
+    iconPadding () {
+      this.drawIconLazy()
+    },
     backgroundColor () {
       this.drawIconLazy()
     },
@@ -285,56 +289,62 @@ let appMain = {
         let {height, width} = drawing
         let resizedHeight = height
         let resizedWidth = width
-        let top = 0
-        let left = 0
         // if (resizedWidth > 512) {
         //   resizedWidth = 512
         //   resizedHeight = resizedHeight * (resizedWidth / width)
         //   top = (512 - resizedHeight) / 2
         // } 
+
+        let widthWithPadding = Math.round(512 * (100 - this.iconPadding) / 100)
+        let paddingWidth = Math.round((512 - widthWithPadding) / 2)
+
+
+        let top = paddingWidth
+        let left = paddingWidth
+
         if (this.fitImage === false) {
           if (resizedWidth > resizedHeight) {
             // if (resizedHeight > 512) {
-              resizedHeight = 512
+              resizedHeight = widthWithPadding
               resizedWidth = resizedWidth * (resizedHeight / height)
               //left = (512 - resizedWidth) / 2
 
-              let maxLeft = 512 - resizedWidth
-              left = maxLeft * (this.youtubeHorizontalPercentage / 100)
+              let maxLeft = widthWithPadding - resizedWidth
+              left = maxLeft * (this.youtubeHorizontalPercentage / 100) + paddingWidth
             // } 
           }
           else {
             // if (resizedWidth > 512) {
-              resizedWidth = 512
+              resizedWidth = widthWithPadding
               resizedHeight = resizedHeight * (resizedWidth / width)
               //left = (512 - resizedWidth) / 2
               
 
-              let max = 512 - resizedHeight
-              top = max * (this.youtubeHorizontalPercentage / 100)
+              let max = widthWithPadding - resizedHeight
+              top = max * (this.youtubeHorizontalPercentage / 100) + paddingWidth
             // } 
           }
         }
         else {
           if (resizedWidth < resizedHeight) {
             // if (resizedHeight > 512) {
-              resizedHeight = 512
+              resizedHeight = widthWithPadding
               resizedWidth = resizedWidth * (resizedHeight / height)
               //left = (512 - resizedWidth) / 2
 
-              let maxLeft = 512 - resizedWidth
-              left = maxLeft / 2
+              let maxLeft = widthWithPadding - resizedWidth
+              left = Math.round(maxLeft / 2) + paddingWidth
             // } 
           }
           else {
             // if (resizedWidth > 512) {
-              resizedWidth = 512
+              resizedWidth = widthWithPadding
               resizedHeight = resizedHeight * (resizedWidth / width)
               //left = (512 - resizedWidth) / 2
               
 
-              let max = 512 - resizedHeight
-              top = max / 2
+              let max = widthWithPadding - resizedHeight
+              top = Math.round(max / 2) + paddingWidth
             // } 
           }
         }

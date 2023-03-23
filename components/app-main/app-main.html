@@ -52,6 +52,12 @@
           </label>
           <input type="text" v-model="backgroundColor" />
         </div>
+        <div class="field">
+          <label>
+            Padding ({{ iconPadding }}%)
+          </label>
+          <input type="range" step="5" min="0" max="50" v-model="iconPadding">
+        </div>
       </div>
       <div class="column">
         <div class="field">
@@ -103,7 +109,8 @@
     </div>
       
     <div class="ui equal width grid">
-      <div class="center aligned column output">
+      <div class="center aligned column output"
+        :class="{'rainbow-background': (setBackground)}">
         <canvas id="canvas" width="512" height="512">
           Your browser does not support the HTML5 canvas tag.
         </canvas>
