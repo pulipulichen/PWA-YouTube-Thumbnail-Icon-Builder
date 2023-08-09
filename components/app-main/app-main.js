@@ -66,7 +66,8 @@ let appMain = {
 
         // blogger
         'https://cdn-icons-png.flaticon.com/512/2673/2673669.png',
-        'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
+        'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg',
+        'https://blogger.googleusercontent.com/img/a/AVvXsEhS3QuNpqvl-zTxxT6PVc5tbXB2nh3JIFp2vDTdkqeaMZ8l-WtaULRRoBN_bp1X5EjzY8OIBvAjjIo4SEOfvqBLGExNKtnbhwQ3GUp_VrBaMgYWQS2pTwgMj5KlulfPEKwAHkpSkmk-GmgxhJEo1-CXXef9HOFmZGfzGLWjZy24R4BxUjSvqwLLFA'
       ],
 
       imgbbHTML: '',
