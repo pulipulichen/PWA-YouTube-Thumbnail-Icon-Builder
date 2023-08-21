@@ -67,7 +67,11 @@ let appMain = {
         // blogger
         'https://cdn-icons-png.flaticon.com/512/2673/2673669.png',
         'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg',
-        'https://blogger.googleusercontent.com/img/a/AVvXsEhS3QuNpqvl-zTxxT6PVc5tbXB2nh3JIFp2vDTdkqeaMZ8l-WtaULRRoBN_bp1X5EjzY8OIBvAjjIo4SEOfvqBLGExNKtnbhwQ3GUp_VrBaMgYWQS2pTwgMj5KlulfPEKwAHkpSkmk-GmgxhJEo1-CXXef9HOFmZGfzGLWjZy24R4BxUjSvqwLLFA'
+        'https://blogger.googleusercontent.com/img/a/AVvXsEhS3QuNpqvl-zTxxT6PVc5tbXB2nh3JIFp2vDTdkqeaMZ8l-WtaULRRoBN_bp1X5EjzY8OIBvAjjIo4SEOfvqBLGExNKtnbhwQ3GUp_VrBaMgYWQS2pTwgMj5KlulfPEKwAHkpSkmk-GmgxhJEo1-CXXef9HOFmZGfzGLWjZy24R4BxUjSvqwLLFA',
+
+        // app
+        'https://blogger.googleusercontent.com/img/a/AVvXsEjarTUjitObYQtqr6jZs6lekhlA5qBOffvY99TzUg5PaUuWBx0EABtpbXcsAd5lqsBqVP0p6m0H4cFOwkKiQi-vLh3FOnvcuKwaUdhqDkox-yW1tKdwxesMxtLUwJqfkIkDQVK3_dHEJ_ZPs87jznz82plyDLGVLBl7b2yNdRbfFFlROcD0j6ohGQ',
+        'https://blogger.googleusercontent.com/img/a/AVvXsEiPn2_SmHaq2kygPzBc1aPfXYfrXUb-_i5JhbN0fUcdt8zCCe3WQmxXdAoa3fihxGdWVtPB4v77Wkvn59B7lyZM1IowLLJyTgxZl-HRQac5FX1tg1zgeMK05iHvyeYjNm259TBf3J9THsEnecNXmcnFVSkIVMkLxIWatomV6M7dcR9R9-U5iJSqWg'
       ],
 
       imgbbHTML: '',
