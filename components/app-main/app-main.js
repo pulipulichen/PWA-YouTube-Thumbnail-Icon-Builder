@@ -71,7 +71,14 @@ let appMain = {
 
         // app
         'https://blogger.googleusercontent.com/img/a/AVvXsEjarTUjitObYQtqr6jZs6lekhlA5qBOffvY99TzUg5PaUuWBx0EABtpbXcsAd5lqsBqVP0p6m0H4cFOwkKiQi-vLh3FOnvcuKwaUdhqDkox-yW1tKdwxesMxtLUwJqfkIkDQVK3_dHEJ_ZPs87jznz82plyDLGVLBl7b2yNdRbfFFlROcD0j6ohGQ',
-        'https://blogger.googleusercontent.com/img/a/AVvXsEiPn2_SmHaq2kygPzBc1aPfXYfrXUb-_i5JhbN0fUcdt8zCCe3WQmxXdAoa3fihxGdWVtPB4v77Wkvn59B7lyZM1IowLLJyTgxZl-HRQac5FX1tg1zgeMK05iHvyeYjNm259TBf3J9THsEnecNXmcnFVSkIVMkLxIWatomV6M7dcR9R9-U5iJSqWg'
+        'https://blogger.googleusercontent.com/img/a/AVvXsEiPn2_SmHaq2kygPzBc1aPfXYfrXUb-_i5JhbN0fUcdt8zCCe3WQmxXdAoa3fihxGdWVtPB4v77Wkvn59B7lyZM1IowLLJyTgxZl-HRQac5FX1tg1zgeMK05iHvyeYjNm259TBf3J9THsEnecNXmcnFVSkIVMkLxIWatomV6M7dcR9R9-U5iJSqWg',
+
+        // internet
+        'https://blogger.googleusercontent.com/img/a/AVvXsEhMI_ZRAvOK8rueF9iwlv5KhWI_yRq1hY79PtvvG1TcG7y6hKSQaymaWlXtaP51yn4pQ1FYtijYojKTo5AGarNhgT7vCp0FNn2bDI7wNaZDOS0GW8P2b02W_9Rfr2wW3VURxDU4cRzh6R5Tgik37FBpTLq9V1IHR57ialr4pw-S0A3ifoJBNywbhQ',
+
+        // note,
+        'https://i.ibb.co/VJqcJnD/planning.png',
+        'https://blogger.googleusercontent.com/img/a/AVvXsEjTu4JTjJibJwcXzNDnfqeEPF1PxmKlUHJjH2A_Ap7oL-0jUUysbiERYGMbbF1_aMZblWRTA4Ki3J365x-2o1qfbY5mPbSmUQq5IAHXu8Y0Uz1Sk_rLDXMOalH_SMd1uDMqBl0pFduLFSpQiMUBf5kz1Ax1eS3L-ZTzXZlqr5ZGPcvINzStsMQ',
       ],
 
       imgbbHTML: '',
