@@ -79,6 +79,9 @@ let appMain = {
         // note,
         'https://i.ibb.co/VJqcJnD/planning.png',
         'https://blogger.googleusercontent.com/img/a/AVvXsEjTu4JTjJibJwcXzNDnfqeEPF1PxmKlUHJjH2A_Ap7oL-0jUUysbiERYGMbbF1_aMZblWRTA4Ki3J365x-2o1qfbY5mPbSmUQq5IAHXu8Y0Uz1Sk_rLDXMOalH_SMd1uDMqBl0pFduLFSpQiMUBf5kz1Ax1eS3L-ZTzXZlqr5ZGPcvINzStsMQ',
+        
+        // clean
+        'https://i.ibb.co/tZtVLNV/clean.png',
       ],
 
       imgbbHTML: '',
