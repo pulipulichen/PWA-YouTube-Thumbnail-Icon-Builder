@@ -82,6 +82,12 @@ let appMain = {
         
         // clean
         'https://i.ibb.co/tZtVLNV/clean.png',
+
+        // AppSheet
+        'https://i.ibb.co/tcMsRCx/download.png',
+
+        // Dify PVE
+        'https://blogger.googleusercontent.com/img/a/AVvXsEju9bk2N_am0iDYGZXsEgS7Y4dCLAl_MxTMoTel9-Xh-K5hOPIk3JDM22jUgP9nh-exEEYp19T-pER4NV70u46BtURUXR4AGmetkPiHrLchPUIEy_MxjO5M0_MSUFiZZC9hdUquCOzzV3NVMFcxn6W_lMkYTB9qOh0fYtQIToE9CaH0CXMVwbZZxA'
       ],
 
       imgbbHTML: '',
