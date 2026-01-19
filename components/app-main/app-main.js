@@ -7,7 +7,7 @@ let appMain = {
     
     return {
       cacheKey: 'YouTube-Thumbnail-Icon',
-      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'iconPadding', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition'],
+      cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'iconPadding', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition', 'base64String'],
       init: false,
       
       YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
@@ -84,13 +84,14 @@ let appMain = {
         'https://i.ibb.co/tZtVLNV/clean.png',
 
         // AppSheet
-        'https://i.ibb.co/tcMsRCx/download.png',
+        'https://blogger.googleusercontent.com/img/a/AVvXsEiItDVfRmIA6x5qCZffA5xtfe2f_M07no4blc9yXPZRs_6krSDpzysxWTaF8ux8ZsItJlU2Qi5dvmAEa7EkzCIZrGDwppe8tKwPCIAgl3NFF9w9NzaPpXFpJDW7Vj67XRIWiQvpP0kbzyAqSWgwFbgly7e2_ygtCqCq5ixersuDuk3xV53Z0_Bmdg',
 
         // Dify PVE
         'https://blogger.googleusercontent.com/img/a/AVvXsEju9bk2N_am0iDYGZXsEgS7Y4dCLAl_MxTMoTel9-Xh-K5hOPIk3JDM22jUgP9nh-exEEYp19T-pER4NV70u46BtURUXR4AGmetkPiHrLchPUIEy_MxjO5M0_MSUFiZZC9hdUquCOzzV3NVMFcxn6W_lMkYTB9qOh0fYtQIToE9CaH0CXMVwbZZxA'
       ],
 
       imgbbHTML: '',
+      base64String: '',
       
     }
   },
@@ -152,7 +153,16 @@ let appMain = {
       let pos2 = this.imgbbHTML.indexOf('"', pos1 + 1)
 
       return this.imgbbHTML.slice(pos1, pos2)
-    }
+    },
+    validBase64String () {
+      return (this.base64String.startsWith('data:image/'))
+    },
+    validBase64StringMain () {
+      return (this.YouTubeURL.startsWith('data:image/'))
+    },
+    validBase64StringCorner () {
+      return (this.iconURL.startsWith('data:image/'))
+    },
   },
   watch: {
     thumbnailURL () {
@@ -604,7 +614,8 @@ let appMain = {
         xhr.onload = () => {
           var reader = new FileReader();
           reader.onloadend = () => {
-            this.YouTubeURL = reader.result
+            // this.YouTubeURL = reader.result
+            this.base64String = reader.result
           }
           reader.readAsDataURL(xhr.response);
         };
@@ -613,6 +624,14 @@ let appMain = {
         xhr.send();
         // this.paste_createImage(source);
       })
+    },
+
+    setAsMainIcon () {
+      this.YouTubeURL = this.base64String
+    },
+
+    setAsCornerIcon () {
+      this.iconURL = this.base64String
     },
   }
 }

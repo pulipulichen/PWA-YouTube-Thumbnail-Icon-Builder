@@ -104,6 +104,31 @@
           <div>
             <a class="ui button" href="https://www.favicon-generator.org/" target="_blank">Favicon Generator</a>
           </div>
+
+          <label>
+            Drag & Drop Convert
+          </label>
+          <div>
+            <input type="text" 
+              v-model="base64String" />
+          </div>
+          <div class="ui buttons fluid">
+            <button type="button" class="ui button"
+              :class="{'positive': (validBase64String && !validBase64StringMain)}"
+              @click="setAsMainIcon">
+              Set as Main Icon
+            </button>
+            <button type="button" class="ui button"
+              :class="{'positive': (validBase64String && !validBase64StringCorner)}"
+              @click="setAsCornerIcon">
+              Set as Corner Icon
+            </button>
+          </div>
+          <div class="ui segment raised"
+            v-if="validBase64String">
+            <img v-bind:src="base64String" 
+              style="max-width: 100%; height: auto; max-height: 250px; width: auto;" />
+          </div>
         </div>
       </div>
     </div>
@@ -120,15 +145,14 @@
           v-bind:download="filename" ref="DownloadButton">Download</a>
         -->
       </div>
-      <div class="column">
-        <iframe src="https://www.flaticon.com/search?word=people&shape=fill&order_by=4"></iframe>
-      </div>
+      
     </div>
       
 
 
   <div class="ui equal width grid">
     <div class="column">
+      <!--
       <iframe src="https://zh-tw.imgbb.com/"></iframe>
 
       <div class="ui equal width grid">
@@ -145,6 +169,10 @@
           v-if="imgbbHTMLoutput">
           <img :src="imgbbHTMLoutput" />
         </a>
+      </div>
+      -->
+      <div class="column">
+        <iframe src="https://www.flaticon.com/search?word=people&shape=fill&order_by=4"></iframe>
       </div>
     </div>
     <div class="column">
