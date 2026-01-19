@@ -313,6 +313,7 @@ let appMain = {
       context.clearRect(0, 0, canvas.width, canvas.height)
 
       let drawing = new Image();
+      // drawing.crossOrigin = 'Anonymous';
       drawing.src = this.thumbnailURL; // can also be a remote URL e.g. http://
       // console.log(drawing.src);
 
@@ -416,6 +417,7 @@ let appMain = {
 
       let drawMusicIcon = () => {
         let iconDrawing = new Image()
+        // iconDrawing.crossOrigin = 'Anonymous';
         iconDrawing.src = this.iconURL; // can also be a remote URL e.g. http://
         iconDrawing.width = 512
         iconDrawing.height = 512
@@ -633,6 +635,22 @@ let appMain = {
     setAsCornerIcon () {
       this.iconURL = this.base64String
     },
+    // downloadImage () {
+    //   const now = new Date();
+    //   const YYYY = now.getFullYear();
+    //   const MM = String(now.getMonth() + 1).padStart(2, '0');
+    //   const DD = String(now.getDate()).padStart(2, '0');
+    //   const HH = String(now.getHours()).padStart(2, '0');
+    //   const mm = String(now.getMinutes()).padStart(2, '0');
+    //   const SS = String(now.getSeconds()).padStart(2, '0');
+    //   const filename = `${YYYY}${MM}${DD}-${HH}${mm}${SS}.png`;
+
+    //   const canvas = document.getElementById("canvas");
+    //   const link = document.createElement('a');
+    //   link.download = filename;
+    //   link.href = canvas.toDataURL("image/png");
+    //   link.click();
+    // },
   }
 }
 
