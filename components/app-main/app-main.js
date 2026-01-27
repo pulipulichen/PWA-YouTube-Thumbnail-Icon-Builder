@@ -1,22 +1,22 @@
 /* global ClipboardUtils */
 
 let appMain = {
-  data () {
-    
-    
-    
+  data() {
+
+
+
     return {
       cacheKey: 'YouTube-Thumbnail-Icon',
       cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'iconPadding', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition', 'base64String'],
       init: false,
-      
+
       YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
       iconURL: 'https://cdn-icons-png.flaticon.com/512/1895/1895657.png',
 
       youtubeHorizontalPercentage: 50,
       iconPaddingPercentage: 0,
       iconPosition: 3,
-      iconPositionList: [7,8,9,4,5,6,1,2,3],
+      iconPositionList: [7, 8, 9, 4, 5, 6, 1, 2, 3],
       canvaseBase64: '',
       drawIconLazyTimer: null,
 
@@ -44,7 +44,7 @@ let appMain = {
         'https://lh3.googleusercontent.com/-f6XuWkPsrEk/Ycq9X8RiDuI/AAAAAAAFEVQ/BYUhx02M45UMVbt3LpwvHUdBP8t-WiVjQCNcBGAsYHQ/s1600/slides-icon-6-yellow.jpg',
         'https://lh3.googleusercontent.com/-KggvrRwyGXA/YVk8ocMehyI/AAAAAAAFBpI/beeiCgBqKQQL6RVG-8DCV6-2D-afb6J0ACLcBGAsYHQ/s1600/sheet-blue-Alecive-Flatwoken-Apps-Google-Drive-Forms.png',
         'https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png',
-        
+
         // gitmind
         'https://blogger.googleusercontent.com/img/a/AVvXsEg7qmOiY-BpThdQyDICyJX6ow9vvyMhA0Ni-IKV0EogcElC7rfLiIU2pZDX1LqPhyo1UcGs6cbYDljBhmWrTC2aoM_5ntjQ0LvzWfvAvTdV4NHesgCD-Zfo4R02AxrHb-JofeZ-3IHckUoVRdIDYqjTntJDn6jax85FgAyuapWz2ZtQBEH94u0',
 
@@ -79,7 +79,7 @@ let appMain = {
         // note,
         'https://i.ibb.co/VJqcJnD/planning.png',
         'https://blogger.googleusercontent.com/img/a/AVvXsEjTu4JTjJibJwcXzNDnfqeEPF1PxmKlUHJjH2A_Ap7oL-0jUUysbiERYGMbbF1_aMZblWRTA4Ki3J365x-2o1qfbY5mPbSmUQq5IAHXu8Y0Uz1Sk_rLDXMOalH_SMd1uDMqBl0pFduLFSpQiMUBf5kz1Ax1eS3L-ZTzXZlqr5ZGPcvINzStsMQ',
-        
+
         // clean
         'https://i.ibb.co/tZtVLNV/clean.png',
 
@@ -87,18 +87,21 @@ let appMain = {
         'https://blogger.googleusercontent.com/img/a/AVvXsEiItDVfRmIA6x5qCZffA5xtfe2f_M07no4blc9yXPZRs_6krSDpzysxWTaF8ux8ZsItJlU2Qi5dvmAEa7EkzCIZrGDwppe8tKwPCIAgl3NFF9w9NzaPpXFpJDW7Vj67XRIWiQvpP0kbzyAqSWgwFbgly7e2_ygtCqCq5ixersuDuk3xV53Z0_Bmdg',
 
         // Dify PVE
-        'https://blogger.googleusercontent.com/img/a/AVvXsEju9bk2N_am0iDYGZXsEgS7Y4dCLAl_MxTMoTel9-Xh-K5hOPIk3JDM22jUgP9nh-exEEYp19T-pER4NV70u46BtURUXR4AGmetkPiHrLchPUIEy_MxjO5M0_MSUFiZZC9hdUquCOzzV3NVMFcxn6W_lMkYTB9qOh0fYtQIToE9CaH0CXMVwbZZxA'
+        'https://blogger.googleusercontent.com/img/a/AVvXsEju9bk2N_am0iDYGZXsEgS7Y4dCLAl_MxTMoTel9-Xh-K5hOPIk3JDM22jUgP9nh-exEEYp19T-pER4NV70u46BtURUXR4AGmetkPiHrLchPUIEy_MxjO5M0_MSUFiZZC9hdUquCOzzV3NVMFcxn6W_lMkYTB9qOh0fYtQIToE9CaH0CXMVwbZZxA',
+
+        // Gemini
+        'https://blogger.googleusercontent.com/img/a/AVvXsEh_P_4u5V5uyNdKnH9-I6DnX1ZeZG13YS8dFYjbZOncb2Cnfm9UutcXZx-Xvu2L5ek62_TgxFqJhMSTp1J8Wu81_vVuJzDLXrsKgcBxIhPjJX-9m7FUVRWKzeFCg2kxnErP5SoSfDa1kEh7-DFKi1sGEBWLvwlzpB4g42oe6nbsaZmVUuRk71CPvw'
       ],
 
       imgbbHTML: '',
       base64String: '',
-      
+
     }
   },
-  mounted () {
+  mounted() {
     this.dataLoad()
     this.initDropdown()
-    
+
     this.inited = true
 
     setTimeout(() => {
@@ -106,11 +109,11 @@ let appMain = {
     }, 500)
   },
   computed: {
-    youtubeId () {
+    youtubeId() {
       return this.YouTubeGetID(this.YouTubeURL)
     },
-    thumbnailURL () {
-      if (typeof(this.YouTubeURL) === 'string' && this.YouTubeURL.startsWith('data:image/')) {
+    thumbnailURL() {
+      if (typeof (this.YouTubeURL) === 'string' && this.YouTubeURL.startsWith('data:image/')) {
         return this.YouTubeURL
       }
       else if (!this.youtubeId || this.youtubeId.startsWith('http')) {
@@ -120,11 +123,11 @@ let appMain = {
         return `https://i.ytimg.com/vi/${this.youtubeId}/maxresdefault.jpg`
       }
     },
-    iconFilename () {
+    iconFilename() {
       try {
         let url = new URL(this.iconURL)
         // console.log(url)
-        let {pathname} = url
+        let { pathname } = url
         if (pathname.indexOf('/') > -1) {
           pathname = pathname.slice(pathname.lastIndexOf('/') + 1)
         }
@@ -138,13 +141,13 @@ let appMain = {
         return ''
       }
     },
-    filename () {
-      return this.youtubeId + 
-        '-' + this.iconFilename + 
+    filename() {
+      return this.youtubeId +
+        '-' + this.iconFilename +
         '-' + this.iconPosition + this.iconPaddingPercentage +
         '.png'
     },
-    imgbbHTMLoutput () {
+    imgbbHTMLoutput() {
       if (this.imgbbHTML.indexOf('src="') === -1) {
         return ''
       }
@@ -154,18 +157,18 @@ let appMain = {
 
       return this.imgbbHTML.slice(pos1, pos2)
     },
-    validBase64String () {
+    validBase64String() {
       return (this.base64String.startsWith('data:image/'))
     },
-    validBase64StringMain () {
+    validBase64StringMain() {
       return (this.YouTubeURL.startsWith('data:image/'))
     },
-    validBase64StringCorner () {
+    validBase64StringCorner() {
       return (this.iconURL.startsWith('data:image/'))
     },
   },
   watch: {
-    thumbnailURL () {
+    thumbnailURL() {
       // this.clearIcon()
       this.drawIconLazy()
 
@@ -182,7 +185,7 @@ let appMain = {
         this.HistoryYouTubeURL.unshift(url)
       }
     },
-    iconURL (url) {
+    iconURL(url) {
       // this.clearIcon()
       this.drawIconLazy()
 
@@ -202,39 +205,39 @@ let appMain = {
         this.HistoryIconURL.unshift(url)
       }
     },
-    iconPaddingPercentage () {
+    iconPaddingPercentage() {
       this.drawIconLazy()
     },
-    iconPosition () {
+    iconPosition() {
       this.drawIconLazy()
     },
-    fitImage () {
+    fitImage() {
       this.drawIconLazy()
     },
-    setBackground () {
+    setBackground() {
       this.drawIconLazy()
     },
-    backgroundCornerRound () {
+    backgroundCornerRound() {
       this.drawIconLazy()
     },
-    iconPadding () {
+    iconPadding() {
       this.drawIconLazy()
     },
-    backgroundColor () {
+    backgroundColor() {
       this.drawIconLazy()
     },
-    youtubeHorizontalPercentage () {
-      this.drawIconLazy()
-    },
-
-    youtubeHueRotateDegree () {
-      this.drawIconLazy()
-    },
-    iconHueRotateDegree () {
+    youtubeHorizontalPercentage() {
       this.drawIconLazy()
     },
 
-    selectHistoryYouTubeURL (url) {
+    youtubeHueRotateDegree() {
+      this.drawIconLazy()
+    },
+    iconHueRotateDegree() {
+      this.drawIconLazy()
+    },
+
+    selectHistoryYouTubeURL(url) {
       if (url === '') {
         return false
       }
@@ -242,7 +245,7 @@ let appMain = {
       this.YouTubeURL = url
       this.selectHistoryYouTubeURL = ''
     },
-    selectHistoryIconURL (url) {
+    selectHistoryIconURL(url) {
       if (url === '') {
         return false
       }
@@ -252,37 +255,37 @@ let appMain = {
     }
   },
   methods: {
-    dataLoad () {
+    dataLoad() {
       let projectFileListData = localStorage.getItem(this.cacheKey)
       if (!projectFileListData) {
         return false
       }
-      
+
       projectFileListData = JSON.parse(projectFileListData)
       for (let key in projectFileListData) {
         this[key] = projectFileListData[key]
       }
     },
-    dataSave () {
+    dataSave() {
       if (this.inited === false) {
         return false
       }
-      
+
       let keys = this.cacheAttrs
-      
+
       let data = {}
       keys.forEach(key => {
         data[key] = this[key]
       })
-      
+
       data = JSON.stringify(data)
       localStorage.setItem(this.cacheKey, data)
     },
 
-    YouTubeGetID: function (url){
+    YouTubeGetID: function (url) {
       var ID = '';
-      url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-      if(url[2] !== undefined) {
+      url = url.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+      if (url[2] !== undefined) {
         ID = url[2].split(/[^0-9a-z_\-]/i);
         ID = ID[0];
       }
@@ -292,23 +295,23 @@ let appMain = {
       }
       return ID;
     },
-    drawIconLazy () {
+    drawIconLazy() {
       clearTimeout(this.drawIconLazyTimer)
       this.drawIconLazyTimer = setTimeout(() => {
         this.drawIcon()
       }, 0)
     },
-    clearIcon () {
+    clearIcon() {
       // this.dataSave()
-      let canvas=document.getElementById("canvas");
-      let context=canvas.getContext('2d');
+      let canvas = document.getElementById("canvas");
+      let context = canvas.getContext('2d');
 
       context.clearRect(0, 0, canvas.width, canvas.height)
     },
-    drawIcon () {
+    drawIcon() {
       this.dataSave()
-      let canvas=document.getElementById("canvas");
-      let context=canvas.getContext('2d');
+      let canvas = document.getElementById("canvas");
+      let context = canvas.getContext('2d');
 
       context.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -318,7 +321,7 @@ let appMain = {
       // console.log(drawing.src);
 
       drawing.onload = () => {
-        let {height, width} = drawing
+        let { height, width } = drawing
         let resizedHeight = height
         let resizedWidth = width
         // if (resizedWidth > 512) {
@@ -337,46 +340,46 @@ let appMain = {
         if (this.fitImage === false) {
           if (resizedWidth > resizedHeight) {
             // if (resizedHeight > 512) {
-              resizedHeight = widthWithPadding
-              resizedWidth = resizedWidth * (resizedHeight / height)
-              //left = (512 - resizedWidth) / 2
+            resizedHeight = widthWithPadding
+            resizedWidth = resizedWidth * (resizedHeight / height)
+            //left = (512 - resizedWidth) / 2
 
-              let maxLeft = widthWithPadding - resizedWidth
-              left = maxLeft * (this.youtubeHorizontalPercentage / 100) + paddingWidth
+            let maxLeft = widthWithPadding - resizedWidth
+            left = maxLeft * (this.youtubeHorizontalPercentage / 100) + paddingWidth
             // } 
           }
           else {
             // if (resizedWidth > 512) {
-              resizedWidth = widthWithPadding
-              resizedHeight = resizedHeight * (resizedWidth / width)
-              //left = (512 - resizedWidth) / 2
-              
+            resizedWidth = widthWithPadding
+            resizedHeight = resizedHeight * (resizedWidth / width)
+            //left = (512 - resizedWidth) / 2
 
-              let max = widthWithPadding - resizedHeight
-              top = max * (this.youtubeHorizontalPercentage / 100) + paddingWidth
+
+            let max = widthWithPadding - resizedHeight
+            top = max * (this.youtubeHorizontalPercentage / 100) + paddingWidth
             // } 
           }
         }
         else {
           if (resizedWidth < resizedHeight) {
             // if (resizedHeight > 512) {
-              resizedHeight = widthWithPadding
-              resizedWidth = resizedWidth * (resizedHeight / height)
-              //left = (512 - resizedWidth) / 2
+            resizedHeight = widthWithPadding
+            resizedWidth = resizedWidth * (resizedHeight / height)
+            //left = (512 - resizedWidth) / 2
 
-              let maxLeft = widthWithPadding - resizedWidth
-              left = Math.round(maxLeft / 2) + paddingWidth
+            let maxLeft = widthWithPadding - resizedWidth
+            left = Math.round(maxLeft / 2) + paddingWidth
             // } 
           }
           else {
             // if (resizedWidth > 512) {
-              resizedWidth = widthWithPadding
-              resizedHeight = resizedHeight * (resizedWidth / width)
-              //left = (512 - resizedWidth) / 2
-              
+            resizedWidth = widthWithPadding
+            resizedHeight = resizedHeight * (resizedWidth / width)
+            //left = (512 - resizedWidth) / 2
 
-              let max = widthWithPadding - resizedHeight
-              top = Math.round(max / 2) + paddingWidth
+
+            let max = widthWithPadding - resizedHeight
+            top = Math.round(max / 2) + paddingWidth
             // } 
           }
         }
@@ -406,12 +409,12 @@ let appMain = {
         if (this.iconHueRotateDegree !== 0 && this.iconHueRotateDegree !== 360) {
           context.filter = `hue-rotate(${this.iconHueRotateDegree}deg)`;
         }
-          
+
 
         if (this.iconPosition !== 0) {
           drawMusicIcon()
         }
-        
+
         //console.log('go')
       }
 
@@ -422,7 +425,7 @@ let appMain = {
         iconDrawing.width = 512
         iconDrawing.height = 512
         iconDrawing.onload = () => {
-          let {height, width} = iconDrawing
+          let { height, width } = iconDrawing
           let resizedHeight = height
           let resizedWidth = width
           let top = 0
@@ -439,8 +442,8 @@ let appMain = {
             // console.log(limitSize)
             if (resizedHeight > limitSize) {
               resizedHeight = limitSize
-              resizedWidth = resizedWidth * (resizedHeight / height)            
-            } 
+              resizedWidth = resizedWidth * (resizedHeight / height)
+            }
 
             left = (512 - resizedWidth) / 2
             top = (512 - resizedHeight) / 2
@@ -449,28 +452,28 @@ let appMain = {
             let limitSize = 256
             if (resizedHeight > limitSize) {
               resizedHeight = limitSize
-              resizedWidth = resizedWidth * (resizedHeight / height)            
-            } 
+              resizedWidth = resizedWidth * (resizedHeight / height)
+            }
           }
 
-          if ([7,8,9].indexOf(this.iconPosition) > -1) {
+          if ([7, 8, 9].indexOf(this.iconPosition) > -1) {
             top = (128 * (Number(this.iconPaddingPercentage) / 100))
           }
-          if ([1,2,3].indexOf(this.iconPosition) > -1) {
+          if ([1, 2, 3].indexOf(this.iconPosition) > -1) {
             top = 256 - (128 * (Number(this.iconPaddingPercentage) / 100))
           }
 
-          if ([7,4,1].indexOf(this.iconPosition) > -1) {
+          if ([7, 4, 1].indexOf(this.iconPosition) > -1) {
             left = (128 * (Number(this.iconPaddingPercentage) / 100))
           }
-          if ([9,6,3].indexOf(this.iconPosition) > -1) {
+          if ([9, 6, 3].indexOf(this.iconPosition) > -1) {
             left = 256 - (128 * (Number(this.iconPaddingPercentage) / 100))
           }
 
-          if ([8,2].indexOf(this.iconPosition) > -1) {
+          if ([8, 2].indexOf(this.iconPosition) > -1) {
             left = 128
           }
-          if ([4,6].indexOf(this.iconPosition) > -1) {
+          if ([4, 6].indexOf(this.iconPosition) > -1) {
             top = 128
           }
 
@@ -528,7 +531,7 @@ let appMain = {
       var cosR = Math.cos(rotation),
         sinR = Math.sin(rotation),
         sqrt = Math.sqrt;
-    
+
       var w = 1 / 3,
         sqrW = sqrt(w);
       var a00 = cosR + (1.0 - cosR) * w;
@@ -548,7 +551,7 @@ let appMain = {
       ];
       return matrix.join(' ');
     },
-    displayItem (url) {
+    displayItem(url) {
       if (url.length > 50) {
         let head = url.slice(0, 20)
         let foot = url.slice(-30)
@@ -556,54 +559,54 @@ let appMain = {
       }
       return url
     },
-    popup (url) {
+    popup(url) {
 
-      var popup = window.open(url, '_blank', "width="+screen.availWidth+",height="+screen.availHeight);
+      var popup = window.open(url, '_blank', "width=" + screen.availWidth + ",height=" + screen.availHeight);
       if (popup == null)
-         alert('Please change your popup settings');
-      else  {
+        alert('Please change your popup settings');
+      else {
         popup.moveTo(0, 0);
         // popup.resizeTo(screen.availWidth, screen.availHeight);
       }
     },
-    initDropdown () {
+    initDropdown() {
       window.addEventListener('dragstart', () => {
         // console.log('dragstart')
         this.isDragFromWindow = true
       })
-  
+
       window.addEventListener('dragenter', () => {
         // console.log('dragenter')
         if (this.isDragFromWindow === false) {
           this.isDragging = true
         }
       })
-  
+
       // window.addEventListener('mouseleave', () => {
       //   console.log('mouseleave')
       //   this.isDragging = false
       // })
-  
+
       // window.addEventListener('dragleave', () => {
       //   console.log('dragleave')
       //   this.isDragging = false
       // })
-  
+
       window.addEventListener('dragend', () => {
         // console.log('dragend')
         this.isDragFromWindow = false
       })
-  
+
       // console.log('okkk')
-  
+
       document.body.addEventListener('dragover', (ev) => {
         ev.preventDefault();
       })
-  
+
       document.body.addEventListener('dragenter', (ev) => {
         ev.preventDefault();
       })
-  
+
       document.body.addEventListener('drop', (ev) => {
         ev.preventDefault();
         // console.log('okkk')
@@ -628,11 +631,11 @@ let appMain = {
       })
     },
 
-    setAsMainIcon () {
+    setAsMainIcon() {
       this.YouTubeURL = this.base64String
     },
 
-    setAsCornerIcon () {
+    setAsCornerIcon() {
       this.iconURL = this.base64String
     },
     // downloadImage () {
