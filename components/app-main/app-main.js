@@ -110,7 +110,7 @@ let appMain = {
 
     setTimeout(() => {
       this.scrollToTop()
-    }, 3000)
+    }, 4000)
   },
   computed: {
     youtubeId() {
