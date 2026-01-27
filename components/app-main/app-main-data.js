@@ -32,7 +32,7 @@ var appMainData = function () {
         iconPositionList: [7, 8, 9, 4, 5, 6, 1, 2, 3],
         iconBorderWidth: 4,
         iconBorderColor: "#FFFFFF",
-        iconSizeScale: 0.5,
+        iconSizeScale: 1,
         canvaseBase64: '',
         drawIconLazyTimer: null,
 
