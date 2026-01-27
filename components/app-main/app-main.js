@@ -107,6 +107,10 @@ let appMain = {
     setTimeout(() => {
       this.drawIcon()
     }, 500)
+
+    setTimeout(() => {
+      this.scrollToTop()
+    }, 3000)
   },
   computed: {
     youtubeId() {
@@ -654,6 +658,10 @@ let appMain = {
     //   link.href = canvas.toDataURL("image/png");
     //   link.click();
     // },
+
+    scrollToTop() {
+      window.scrollTo(0, 0)
+    },
   }
 }
 
