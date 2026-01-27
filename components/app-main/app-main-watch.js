@@ -73,6 +73,9 @@ var appMainWatch = {
     iconBorderColor() {
         this.drawIconLazy()
     },
+    iconSizeScale() {
+        this.drawIconLazy()
+    },
 
     selectHistoryYouTubeURL(url) {
         if (url === '') {

@@ -119,6 +119,13 @@
 
               <div class="ui field">
                 <label>
+                  Icon Size Scale ({{ iconSizeScale }}%)
+                </label>
+                <input type="range" step="0.1" min="0.5" max="1" v-model="iconSizeScale">
+              </div>
+
+              <div class="ui field">
+                <label>
                   Icon Padding Percentage ({{ iconPaddingPercentage }}%)
                 </label>
                 <input type="range" step="10" min="0" max="100" v-model="iconPaddingPercentage">

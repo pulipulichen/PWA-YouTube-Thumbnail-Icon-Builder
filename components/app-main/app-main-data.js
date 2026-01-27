@@ -1,7 +1,26 @@
 var appMainData = function () {
     return {
         cacheKey: 'YouTube-Thumbnail-Icon',
-        cacheAttrs: ['YouTubeURL', 'HistoryYouTubeURL', 'iconURL', 'setBackground', 'iconPadding', 'backgroundCornerRound', 'backgroundColor', 'fitImage', 'HistoryIconURL', 'youtubeHorizontalPercentage', 'youtubeHueRotateDegree', 'iconHueRotateDegree', 'iconPaddingPercentage', 'iconPosition', 'base64String'],
+        cacheAttrs: [
+            'YouTubeURL',
+            'HistoryYouTubeURL',
+            'iconURL',
+            'setBackground',
+            'iconPadding',
+            'backgroundCornerRound',
+            'backgroundColor',
+            'fitImage',
+            'HistoryIconURL',
+            'youtubeHorizontalPercentage',
+            'youtubeHueRotateDegree',
+            'iconHueRotateDegree',
+            'iconPaddingPercentage',
+            'iconPosition',
+            'iconBorderWidth',
+            'iconBorderColor',
+            'iconSizeScale',
+            'base64String'
+        ],
         init: false,
 
         YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
@@ -13,6 +32,7 @@ var appMainData = function () {
         iconPositionList: [7, 8, 9, 4, 5, 6, 1, 2, 3],
         iconBorderWidth: 4,
         iconBorderColor: "#FFFFFF",
+        iconSizeScale: 0.5,
         canvaseBase64: '',
         drawIconLazyTimer: null,
 
