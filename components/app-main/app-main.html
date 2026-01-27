@@ -1,8 +1,19 @@
 <form class="ui form">
 
   <div class="ui segment">
-    
+
     <div class="ui equal width grid">
+      <div class="center aligned column output" style="min-width: 550px;"
+        :class="{'rainbow-background': (setBackground)}">
+        <canvas id="canvas" width="512" height="512">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <!--
+        <a class="ui fluid button" 
+          v-bind:href="canvaseBase64" 
+          v-bind:download="filename" ref="DownloadButton">Download</a>
+        -->
+      </div>
       <div class="column">
         <div class="field">
           <label>
@@ -12,8 +23,7 @@
         </div>
         <div class="field">
           <div class="preset-icons history-icon">
-            <img v-for="url in HistoryYouTubeURL" v-bind:src="url"
-                 v-on:click="iconURL = url" />
+            <img v-for="url in HistoryYouTubeURL" v-bind:src="url" v-on:click="iconURL = url" />
           </div>
         </div>
         <div class="field">
@@ -71,42 +81,60 @@
             Preset ICON list
           </label>
           <div class="preset-icons">
-            <img v-for="url in presetIcons" v-bind:src="url"
-                 v-on:click="iconURL = url" />
+            <img v-for="url in presetIcons" v-bind:src="url" v-on:click="iconURL = url" />
           </div>
         </div>
         <div class="field">
           <div class="preset-icons history-icon">
-            <img v-for="url in HistoryIconURL" v-bind:src="url"
-                 v-on:click="iconURL = url" />
+            <img v-for="url in HistoryIconURL" v-bind:src="url" v-on:click="iconURL = url" />
           </div>
         </div>
       </div>
       <div class="column">
         <div class="field">
-          <label>
-            Icon Position
-          </label>
-          <div class="icon-position-selector">
-            <template v-for="pos in iconPositionList"><span v-on:click="iconPosition = pos"
-                v-bind:class="{selected: (pos === iconPosition)}"
-                >{{ pos }}</span><br v-if="pos === 9 || pos === 6 || pos === 3" /></template>
-            <span v-on:click="iconPosition = 0"
-                v-bind:class="{selected: (0 === iconPosition)}"
-                class="hidden-button"
-                >Hidden</span>
+
+          <div class="ui equal width grid">
+            <div class="column">
+              <label>
+                Icon Position
+              </label>
+              <div class="icon-position-selector">
+                <template v-for="pos in iconPositionList"><span v-on:click="iconPosition = pos"
+                    v-bind:class="{selected: (pos === iconPosition)}">{{ pos }}</span><br
+                    v-if="pos === 9 || pos === 6 || pos === 3" /></template>
+                <span v-on:click="iconPosition = 0" v-bind:class="{selected: (0 === iconPosition)}"
+                  class="hidden-button">Hidden</span>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui field">
+                <label>Border width</label>
+                <input type="range" step="10" min="0" max="100" v-model="iconBorderWidth">
+              </div>
+
+              <div class="ui field">
+                <label>Border Color</label>
+                <input type="text" v-model="iconBorderColor" />
+              </div>
+
+              <div class="ui field">
+                <label>
+                  Icon Padding Percentage ({{ iconPaddingPercentage }}%)
+                </label>
+                <input type="range" step="10" min="0" max="100" v-model="iconPaddingPercentage">
+              </div>
+            </div>
           </div>
 
-          <label>
-            Icon Padding Percentage ({{ iconPaddingPercentage }}%)
-          </label>
-          <input type="range" step="10" min="0" max="100" v-model="iconPaddingPercentage">
+
+
           <div class="ui equal width grid">
             <div class="ui column">
               <a class="ui fluid button" href="https://www.favicon-generator.org/" target="_blank">Favicon Generator</a>
             </div>
             <div class="ui  column">
-              <a class="ui fluid button" href="https://www.webtoolsonline.org/tools/text-to-icon?utm_source=chatgpt.com" target="_blank">Text to Icon</a>
+              <a class="ui fluid button" href="https://www.webtoolsonline.org/tools/text-to-icon?utm_source=chatgpt.com"
+                target="_blank">Text to Icon</a>
             </div>
           </div>
 
@@ -114,50 +142,28 @@
             Drag & Drop Convert
           </label>
           <div>
-            <input type="text" 
-              v-model="base64String" />
+            <input type="text" v-model="base64String" />
           </div>
           <div class="ui buttons fluid">
-            <button type="button" class="ui button"
-              :class="{'positive': (validBase64String && !validBase64StringMain)}"
+            <button type="button" class="ui button" :class="{'positive': (validBase64String && !validBase64StringMain)}"
               @click="setAsMainIcon">
               Set as Main Icon
             </button>
             <button type="button" class="ui button"
-              :class="{'positive': (validBase64String && !validBase64StringCorner)}"
-              @click="setAsCornerIcon">
+              :class="{'positive': (validBase64String && !validBase64StringCorner)}" @click="setAsCornerIcon">
               Set as Corner Icon
             </button>
           </div>
-          <div class="ui segment raised"
-            v-if="validBase64String">
-            <img v-bind:src="base64String" 
-              style="max-width: 100%; height: auto; max-height: 250px; width: auto;" />
+          <div class="ui segment raised" v-if="validBase64String">
+            <img v-bind:src="base64String" style="max-width: 100%; height: auto; max-height: 150px; width: auto;" />
           </div>
         </div>
       </div>
     </div>
-      
+
     <div class="ui equal width grid">
-      <div class="center aligned column output"
-        :class="{'rainbow-background': (setBackground)}">
-        <canvas id="canvas" width="512" height="512">
-          Your browser does not support the HTML5 canvas tag.
-        </canvas>
+      <div class="column">
         <!--
-        <a class="ui fluid button" 
-          v-bind:href="canvaseBase64" 
-          v-bind:download="filename" ref="DownloadButton">Download</a>
-        -->
-      </div>
-      
-    </div>
-      
-
-
-  <div class="ui equal width grid">
-    <div class="column">
-      <!--
       <iframe src="https://zh-tw.imgbb.com/"></iframe>
 
       <div class="ui equal width grid">
@@ -176,32 +182,30 @@
         </a>
       </div>
       -->
+        <div class="column">
+          <iframe src="https://www.flaticon.com/search?word=people&shape=fill&order_by=4"></iframe>
+        </div>
+      </div>
       <div class="column">
-        <iframe src="https://www.flaticon.com/search?word=people&shape=fill&order_by=4"></iframe>
+        <iframe src="https://pulipulichen.github.io/PWA-Builder/index.html"></iframe>
       </div>
     </div>
-    <div class="column">
-      <iframe src="https://pulipulichen.github.io/PWA-Builder/index.html"></iframe>
-    </div>
-  </div>
 
-  <div class="ui equal width grid">
-    <div class="column">
-      <a href="https://coolors.co/palettes/popular/warm"
-        class="ui fluid button"
-        @click.prevent.stop="popup('https://coolors.co/palettes/popular/warm')">
-        Warm Colors
-      </a>
+    <div class="ui equal width grid">
+      <div class="column">
+        <a href="https://coolors.co/palettes/popular/warm" class="ui fluid button"
+          @click.prevent.stop="popup('https://coolors.co/palettes/popular/warm')">
+          Warm Colors
+        </a>
+      </div>
+      <div class="column">
+        <a href="https://color.adobe.com/create/image" class="ui fluid button"
+          @click.prevent.stop="popup('https://color.adobe.com/create/image')">
+          Extract Color from Image
+        </a>
+      </div>
     </div>
-    <div class="column">
-      <a href="https://color.adobe.com/create/image"
-        class="ui fluid button"
-        @click.prevent.stop="popup('https://color.adobe.com/create/image')">
-        Extract Color from Image
-      </a>
-    </div>
-  </div>
-  
+
   </div>
 
 </form>
