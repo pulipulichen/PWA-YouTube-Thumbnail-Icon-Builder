@@ -77,16 +77,16 @@
           <input type="url" v-model="iconURL" />
         </div>
         <div class="field">
+          <div class="preset-icons history-icon">
+            <img v-for="url in HistoryIconURL" v-bind:src="url" v-on:click="iconURL = url" />
+          </div>
+        </div>
+        <div class="field">
           <label>
             Preset ICON list
           </label>
           <div class="preset-icons">
             <img v-for="url in presetIcons" v-bind:src="url" v-on:click="iconURL = url" />
-          </div>
-        </div>
-        <div class="field">
-          <div class="preset-icons history-icon">
-            <img v-for="url in HistoryIconURL" v-bind:src="url" v-on:click="iconURL = url" />
           </div>
         </div>
       </div>
