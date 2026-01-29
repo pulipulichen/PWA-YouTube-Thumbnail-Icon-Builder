@@ -109,7 +109,10 @@ var appMainData = function () {
             'https://blogger.googleusercontent.com/img/a/AVvXsEju9bk2N_am0iDYGZXsEgS7Y4dCLAl_MxTMoTel9-Xh-K5hOPIk3JDM22jUgP9nh-exEEYp19T-pER4NV70u46BtURUXR4AGmetkPiHrLchPUIEy_MxjO5M0_MSUFiZZC9hdUquCOzzV3NVMFcxn6W_lMkYTB9qOh0fYtQIToE9CaH0CXMVwbZZxA',
 
             // Gemini
-            'https://blogger.googleusercontent.com/img/a/AVvXsEh_P_4u5V5uyNdKnH9-I6DnX1ZeZG13YS8dFYjbZOncb2Cnfm9UutcXZx-Xvu2L5ek62_TgxFqJhMSTp1J8Wu81_vVuJzDLXrsKgcBxIhPjJX-9m7FUVRWKzeFCg2kxnErP5SoSfDa1kEh7-DFKi1sGEBWLvwlzpB4g42oe6nbsaZmVUuRk71CPvw'
+            'https://blogger.googleusercontent.com/img/a/AVvXsEh_P_4u5V5uyNdKnH9-I6DnX1ZeZG13YS8dFYjbZOncb2Cnfm9UutcXZx-Xvu2L5ek62_TgxFqJhMSTp1J8Wu81_vVuJzDLXrsKgcBxIhPjJX-9m7FUVRWKzeFCg2kxnErP5SoSfDa1kEh7-DFKi1sGEBWLvwlzpB4g42oe6nbsaZmVUuRk71CPvw',
+
+            // Tailscale
+            'https://blogger.googleusercontent.com/img/a/AVvXsEhm093JvwRpKYA3RUK7sJoAN4xi8AMtgLozPXBgHjX_pO7bNt3kMf5vxd_BUaKNwJ3c25sAXdjKFrtP_nu5xe9Y_mDHa174uPAYQWpncis_jSo5uOwvWHVEaEUTonSOKsYGRSPVy9g0SkAJuNRa0Oc8klMaBYCUM-9ryeaSIHZVxf8zP-9vdpOxcA',
         ],
 
         imgbbHTML: '',
