@@ -119,6 +119,9 @@ var appMainData = function () {
 
             // PVE
             'https://blogger.googleusercontent.com/img/a/AVvXsEgu7jqm76xHiwmmUqUYRIHnWNpwQILVhW-e66-dy5fPJTweP2raMXPv62c8UjlDZTAmmw9Qhpe0iFxhxOxmigygCBAy1l_C97HqBQ2wBBSAhJxuHGeMZXaJ6buWje5dPWoan4bncQELv3JE7be8twJ39azwxSAuXCFAD0v040otCFloRGJg-RANSQ',
+
+            // Docker
+            'https://blogger.googleusercontent.com/img/a/AVvXsEizjjxH3lz3WbtI6fwCzpoUtJqjD3pdRreUFz06rOW-UvOaLRNFzoxJ6Hh61eOVyb4bUWnQ7P8j5TgBEpDDxiCwWwDvHrqUwh7wuQt-vWNnUAA3j5eWGyVG_vIqoB0zd2V1qCR01r5EVwxLHRUHQJPf3cr_cZLm3X_bhbqQ5eCMnWeHLIS-0JMgkA',
         ],
 
         imgbbHTML: '',
