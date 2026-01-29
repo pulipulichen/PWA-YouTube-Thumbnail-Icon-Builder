@@ -116,6 +116,9 @@ var appMainData = function () {
 
             // Tailscale
             'https://blogger.googleusercontent.com/img/a/AVvXsEhm093JvwRpKYA3RUK7sJoAN4xi8AMtgLozPXBgHjX_pO7bNt3kMf5vxd_BUaKNwJ3c25sAXdjKFrtP_nu5xe9Y_mDHa174uPAYQWpncis_jSo5uOwvWHVEaEUTonSOKsYGRSPVy9g0SkAJuNRa0Oc8klMaBYCUM-9ryeaSIHZVxf8zP-9vdpOxcA',
+
+            // PVE
+            'https://blogger.googleusercontent.com/img/a/AVvXsEgu7jqm76xHiwmmUqUYRIHnWNpwQILVhW-e66-dy5fPJTweP2raMXPv62c8UjlDZTAmmw9Qhpe0iFxhxOxmigygCBAy1l_C97HqBQ2wBBSAhJxuHGeMZXaJ6buWje5dPWoan4bncQELv3JE7be8twJ39azwxSAuXCFAD0v040otCFloRGJg-RANSQ',
         ],
 
         imgbbHTML: '',
