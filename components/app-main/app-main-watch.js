@@ -35,6 +35,10 @@ var appMainWatch = {
             this.HistoryIconURL = this.HistoryIconURL.filter(item => item !== url)
             this.HistoryIconURL.unshift(url)
         }
+
+        if (this.iconPosition === 0) {
+            this.iconPosition = 3
+        }
     },
     iconPaddingPercentage() {
         this.drawIconLazy()
