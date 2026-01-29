@@ -103,7 +103,7 @@ var appMainData = function () {
             'https://blogger.googleusercontent.com/img/a/AVvXsEgGARXVGnC2HuIpy_rjMNjDx1BgwBx8aAn6NPr1ok8ZejmDzxeeltlL5ccB1HhH2DHzwkBFUOYnnMRDlYKmJgUI7oRkWp8bc1-Insm7MWjzQZ8i16N-DbHktvXxD_HXpv70IIRgZI_7_JuSQOQDHkdU0Imf4OulvZ1H3-3ls6JZx-zcNIDpwVhzsw',
 
             // AppSheet
-            'https://blogger.googleusercontent.com/img/a/AVvXsEiItDVfRmIA6x5qCZffA5xtfe2f_M07no4blc9yXPZRs_6krSDpzysxWTaF8ux8ZsItJlU2Qi5dvmAEa7EkzCIZrGDwppe8tKwPCIAgl3NFF9w9NzaPpXFpJDW7Vj67XRIWiQvpP0kbzyAqSWgwFbgly7e2_ygtCqCq5ixersuDuk3xV53Z0_Bmdg',
+            'https://blogger.googleusercontent.com/img/a/AVvXsEhuT1VgVjXkWN_ljAnm6ITLmC3A0SgDvytEJFijpNi4IJoNqi-W3oYPS0xu5fQQk6X3xeClRw92fdBMAv7rsDKY4PLAONxVQ9hStN6brjFfO9Uk1lNxbtx416Y_COo0sq_fj9m6ml9PEhSL_ck3e_T2ksEQ5y7rEaMdYKz25dNm_GGFgwj13-1U_Q',
 
             // Dify PVE
             'https://blogger.googleusercontent.com/img/a/AVvXsEju9bk2N_am0iDYGZXsEgS7Y4dCLAl_MxTMoTel9-Xh-K5hOPIk3JDM22jUgP9nh-exEEYp19T-pER4NV70u46BtURUXR4AGmetkPiHrLchPUIEy_MxjO5M0_MSUFiZZC9hdUquCOzzV3NVMFcxn6W_lMkYTB9qOh0fYtQIToE9CaH0CXMVwbZZxA',
