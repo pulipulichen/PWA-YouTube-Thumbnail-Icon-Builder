@@ -99,6 +99,9 @@ var appMainData = function () {
             // clean
             'https://i.ibb.co/tZtVLNV/clean.png',
 
+            // reset
+            'https://blogger.googleusercontent.com/img/a/AVvXsEgGARXVGnC2HuIpy_rjMNjDx1BgwBx8aAn6NPr1ok8ZejmDzxeeltlL5ccB1HhH2DHzwkBFUOYnnMRDlYKmJgUI7oRkWp8bc1-Insm7MWjzQZ8i16N-DbHktvXxD_HXpv70IIRgZI_7_JuSQOQDHkdU0Imf4OulvZ1H3-3ls6JZx-zcNIDpwVhzsw',
+
             // AppSheet
             'https://blogger.googleusercontent.com/img/a/AVvXsEiItDVfRmIA6x5qCZffA5xtfe2f_M07no4blc9yXPZRs_6krSDpzysxWTaF8ux8ZsItJlU2Qi5dvmAEa7EkzCIZrGDwppe8tKwPCIAgl3NFF9w9NzaPpXFpJDW7Vj67XRIWiQvpP0kbzyAqSWgwFbgly7e2_ygtCqCq5ixersuDuk3xV53Z0_Bmdg',
 
