@@ -171,4 +171,12 @@ var appMainMethodsDraw = {
             }
         }
     },
+    presetToIcon(url) {
+        if (this.presetIconsToMain == true) {
+            this.YouTubeURL = url
+        }
+        else {
+            this.iconURL = url;
+        }
+    }
 }

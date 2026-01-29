@@ -81,12 +81,24 @@
             <img v-for="url in HistoryIconURL" v-bind:src="url" v-on:click="iconURL = url" />
           </div>
         </div>
+
         <div class="field">
           <label>
             Preset ICON list
           </label>
+
           <div class="preset-icons">
-            <img v-for="url in presetIcons" v-bind:src="url" v-on:click="iconURL = url" />
+            <img v-for="url in presetIcons" v-bind:src="url" v-on:click="presetToIcon(url)" />
+          </div>
+          <div class="ui buttons fluid">
+            <button class="ui button" v-bind:class="{'active': presetIconsToMain}" v-on:click="presetIconsToMain = true"
+              type="button">
+              To Main
+            </button>
+            <button class="ui button" v-bind:class="{'active': !presetIconsToMain}"
+              v-on:click="presetIconsToMain = false" type="button">
+              To Icon
+            </button>
           </div>
         </div>
       </div>

@@ -19,7 +19,8 @@ var appMainData = function () {
             'iconBorderWidth',
             'iconBorderColor',
             'iconSizeScale',
-            'base64String'
+            'base64String',
+            'presetIconsToMain'
         ],
         init: false,
 
@@ -50,6 +51,8 @@ var appMainData = function () {
 
         selectHistoryYouTubeURL: ``,
         selectHistoryIconURL: ``,
+
+        presetIconsToMain: false,
 
         presetIcons: [
             'https://cdn-icons-png.flaticon.com/512/1895/1895657.png',
