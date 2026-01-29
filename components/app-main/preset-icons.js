@@ -66,4 +66,7 @@ let PRESET_ICONS = [
 
     // Docker
     'https://blogger.googleusercontent.com/img/a/AVvXsEizjjxH3lz3WbtI6fwCzpoUtJqjD3pdRreUFz06rOW-UvOaLRNFzoxJ6Hh61eOVyb4bUWnQ7P8j5TgBEpDDxiCwWwDvHrqUwh7wuQt-vWNnUAA3j5eWGyVG_vIqoB0zd2V1qCR01r5EVwxLHRUHQJPf3cr_cZLm3X_bhbqQ5eCMnWeHLIS-0JMgkA',
+
+    // Bash
+    'https://blogger.googleusercontent.com/img/a/AVvXsEhPRVwXDcuzmcP4wWh5Kx8wvg9bjwHuvyC9vhpq4S63PxgotR97s7dkD6W48UOqX4Nce67ZV8SkUMho91UpW1KQMUPBuhYKekMuoFI_Orum9yorvoNGsN83Bf7RAIyzn6ZNzASQNmtiAMY8rER-DyI_b2OWwHfWtiavHXg9KnWgUwVgyHJNltH_GQ',
 ]
