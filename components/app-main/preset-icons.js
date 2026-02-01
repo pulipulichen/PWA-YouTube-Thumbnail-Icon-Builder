@@ -69,4 +69,7 @@ let PRESET_ICONS = [
 
     // Bash
     'https://blogger.googleusercontent.com/img/a/AVvXsEhPRVwXDcuzmcP4wWh5Kx8wvg9bjwHuvyC9vhpq4S63PxgotR97s7dkD6W48UOqX4Nce67ZV8SkUMho91UpW1KQMUPBuhYKekMuoFI_Orum9yorvoNGsN83Bf7RAIyzn6ZNzASQNmtiAMY8rER-DyI_b2OWwHfWtiavHXg9KnWgUwVgyHJNltH_GQ',
+
+    // YouTube
+    'https://i.ibb.co/hKWT2Zz/image.png',
 ]
