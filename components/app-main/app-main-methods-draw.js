@@ -177,6 +177,10 @@ var appMainMethodsDraw = {
         }
         else {
             this.iconURL = url;
+
+            if (this.iconPosition === 0) {
+                this.iconPosition = 3
+            }
         }
     }
 }
