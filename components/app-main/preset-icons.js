@@ -58,6 +58,9 @@ let PRESET_ICONS = [
     // Gemini
     'https://blogger.googleusercontent.com/img/a/AVvXsEh_P_4u5V5uyNdKnH9-I6DnX1ZeZG13YS8dFYjbZOncb2Cnfm9UutcXZx-Xvu2L5ek62_TgxFqJhMSTp1J8Wu81_vVuJzDLXrsKgcBxIhPjJX-9m7FUVRWKzeFCg2kxnErP5SoSfDa1kEh7-DFKi1sGEBWLvwlzpB4g42oe6nbsaZmVUuRk71CPvw',
 
+    // ChatGPT
+    'https://blogger.googleusercontent.com/img/a/AVvXsEjmQBVqhOhANZs-tOKjqZ04VF_BLvfanhpMuc897f6Evq8rC2WWKyKK91WfEudMzd95Vq4egohnhZqM17swx6BvwqJKJfsB7S3Lnf9qiOz2FK0OW79HzrzTwRpskB89-AVSmH8SZ9vxmrtogty7649u8jqTlPR8JeBRAt6nfrelpY60pN99rrc',
+
     // Tailscale
     'https://blogger.googleusercontent.com/img/a/AVvXsEhm093JvwRpKYA3RUK7sJoAN4xi8AMtgLozPXBgHjX_pO7bNt3kMf5vxd_BUaKNwJ3c25sAXdjKFrtP_nu5xe9Y_mDHa174uPAYQWpncis_jSo5uOwvWHVEaEUTonSOKsYGRSPVy9g0SkAJuNRa0Oc8klMaBYCUM-9ryeaSIHZVxf8zP-9vdpOxcA',
 
