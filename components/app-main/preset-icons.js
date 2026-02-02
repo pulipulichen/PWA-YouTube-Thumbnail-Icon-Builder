@@ -78,4 +78,7 @@ let PRESET_ICONS = [
 
     // Gmail
     'https://lh3.googleusercontent.com/-8MRoD-6AwC8/YTXIqNVf-hI/AAAAAAAFBd8/RSz0eNITGVsh9X6g5e6Nn6if7_Hr5hnPwCLcBGAsYHQ/s1600/gmail-icon-38470.png',
+
+    // Key
+    'https://blogger.googleusercontent.com/img/a/AVvXsEhfm7YuVnFqi_lvKN8CXPIJBlDDC5DCFoh2hUN4xIiPEGa-SUzZrZ3JrGOQ9T5wyXMgJl0ExpZecCxhvvlxvdedjS0BYquh3A60LXJqMCjSlpZDdCsBlOZoMq1uLH0Lr3rWrdCj7cFiSrzgD186CV9ZfPqKLrlWrqRfm9L1EdWmn_eWvETYOMxqOA',
 ]
