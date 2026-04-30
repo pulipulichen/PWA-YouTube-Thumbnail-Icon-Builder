@@ -189,11 +189,12 @@ let app = {
         let type = types.filter(c => c.startsWith('image/'))[0]
 
 
-        if (type) {
-          let imageType = type.split('/')[1].trim()
-          if (title.endsWith('.' + imageType) === false) {
-            title = title + '.' + imageType
+        if (/\.[^/.]+$/.test(title) === false) {
+          if (!type) {
+            type = 'image/png'
           }
+          let imageType = type.split('/')[1].trim()
+          title = title + '.' + imageType
         }
 
         // console.log(url, type)

@@ -48,12 +48,16 @@ var appMainMethodsDnD = {
 
             var xhr = new XMLHttpRequest();
             xhr.onload = () => {
+                let response = xhr.response
+                if (!blob.name || /\.[^/.]+$/.test(blob.name) === false) {
+                    response = new Blob([response], { type: 'image/png' })
+                }
                 var reader = new FileReader();
                 reader.onloadend = () => {
                     // this.YouTubeURL = reader.result
                     this.base64String = reader.result
                 }
-                reader.readAsDataURL(xhr.response);
+                reader.readAsDataURL(response);
             };
             xhr.open('GET', url);
             xhr.responseType = 'blob';
