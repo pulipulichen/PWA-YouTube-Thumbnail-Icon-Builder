@@ -76,6 +76,12 @@ let PRESET_ICONS = [
     // YouTube
     'https://i.ibb.co/hKWT2Zz/image.png',
 
+    // Gmail
+    'https://lh3.googleusercontent.com/-8MRoD-6AwC8/YTXIqNVf-hI/AAAAAAAFBd8/RSz0eNITGVsh9X6g5e6Nn6if7_Hr5hnPwCLcBGAsYHQ/s1600/gmail-icon-38470.png',
+
+    // Key
+    'https://blogger.googleusercontent.com/img/a/AVvXsEhfm7YuVnFqi_lvKN8CXPIJBlDDC5DCFoh2hUN4xIiPEGa-SUzZrZ3JrGOQ9T5wyXMgJl0ExpZecCxhvvlxvdedjS0BYquh3A60LXJqMCjSlpZDdCsBlOZoMq1uLH0Lr3rWrdCj7cFiSrzgD186CV9ZfPqKLrlWrqRfm9L1EdWmn_eWvETYOMxqOA',
+
     // Dolphin
     'https://blogger.googleusercontent.com/img/a/AVvXsEjI2pmJR0REJ4PMl9NLBE5KNprJSZuZZZuptVtF4lKGhG8DGq-dDhJUb8F1Nhd5Qb9u7DOce3xqhII8iBfyU9CApkCkLd4IVkbYxlfapQiIyf9C1KEprBU9sSepVoMVi209J2WI_NiAP-7P01Cpg4qIQ-9i1Jq1jpstX6R-rUuUrXTykfYAJ6p34A',
 
