@@ -75,4 +75,13 @@ let PRESET_ICONS = [
 
     // YouTube
     'https://i.ibb.co/hKWT2Zz/image.png',
+
+    // Dolphin
+    'https://blogger.googleusercontent.com/img/a/AVvXsEjI2pmJR0REJ4PMl9NLBE5KNprJSZuZZZuptVtF4lKGhG8DGq-dDhJUb8F1Nhd5Qb9u7DOce3xqhII8iBfyU9CApkCkLd4IVkbYxlfapQiIyf9C1KEprBU9sSepVoMVi209J2WI_NiAP-7P01Cpg4qIQ-9i1Jq1jpstX6R-rUuUrXTykfYAJ6p34A',
+
+    // KDE,
+    'https://blogger.googleusercontent.com/img/a/AVvXsEgJ9lGU4M0hKXNu-j3KnenE6Fu7uxuKtZkOmz82wLPrYGCRzjn3fz5UfnFqrv2TCamvr0peya1FF5Vu-081_K3o3Zgo0zx8WzOg2jW8lXCS-0i2orfCB5432dGTR_4TiXYK3hXPJ56r6dcJoiVe0zK6c6ZDQ2x2O6vb7LrPnLG6kwAVtIwXZIzQAg',
+
+    // Obsidian,
+    'https://blogger.googleusercontent.com/img/a/AVvXsEhBXv29BQu1SEk6zZn-MzPbILgy-U7YsPp61q8Hb6MIBR1eneVb6z_5vRzueTPvruzTqZpMY8-hz3KIWHJ5f-0IscmV0c5jkBZYyooyD-vnzz_pVWzERbb4WkAhdV-8C0r1EI9-AUn2XCaO3plj3ETzR54TTgNsfNhrOx77rY8hhdNvdL8UZzN3xQ',
 ]
