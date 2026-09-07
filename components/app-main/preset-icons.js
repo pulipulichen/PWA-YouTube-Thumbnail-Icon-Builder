@@ -89,5 +89,5 @@ let PRESET_ICONS = [
     'https://blogger.googleusercontent.com/img/a/AVvXsEgJ9lGU4M0hKXNu-j3KnenE6Fu7uxuKtZkOmz82wLPrYGCRzjn3fz5UfnFqrv2TCamvr0peya1FF5Vu-081_K3o3Zgo0zx8WzOg2jW8lXCS-0i2orfCB5432dGTR_4TiXYK3hXPJ56r6dcJoiVe0zK6c6ZDQ2x2O6vb7LrPnLG6kwAVtIwXZIzQAg',
 
     // Obsidian,
-    'https://blogger.googleusercontent.com/img/a/AVvXsEhBXv29BQu1SEk6zZn-MzPbILgy-U7YsPp61q8Hb6MIBR1eneVb6z_5vRzueTPvruzTqZpMY8-hz3KIWHJ5f-0IscmV0c5jkBZYyooyD-vnzz_pVWzERbb4WkAhdV-8C0r1EI9-AUn2XCaO3plj3ETzR54TTgNsfNhrOx77rY8hhdNvdL8UZzN3xQ',
+    'https://blogger.googleusercontent.com/img/a/AVvXsEgV4JckED1Ch4ASPGuHz9nUa90AMstGEEMgn3H108HyNnBfEQw6UdCbGXB435od3EZCra6LeL7qVqdpJVTG9AVj8rF-0ze_Liu-6dOQJv6Mx7Iv-2I4KaEGqFOweB1amWA901dK1CNfn7UutPGiv99NSVwFPOGeAxMc5wUaOTF1_JlFkE1pRU87Mw',
 ]
