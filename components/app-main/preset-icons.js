@@ -67,6 +67,9 @@ let PRESET_ICONS = [
     // PVE
     'https://blogger.googleusercontent.com/img/a/AVvXsEgu7jqm76xHiwmmUqUYRIHnWNpwQILVhW-e66-dy5fPJTweP2raMXPv62c8UjlDZTAmmw9Qhpe0iFxhxOxmigygCBAy1l_C97HqBQ2wBBSAhJxuHGeMZXaJ6buWje5dPWoan4bncQELv3JE7be8twJ39azwxSAuXCFAD0v040otCFloRGJg-RANSQ',
 
+    // PVE ES
+    'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnCGnUkj7fkdaxr5Uj60xk7dRMncBgq_g2yoNyGKodbikzcNsEZbTa6SwNMy5bjZA3PQU37kQ2EMfV7CdC-TWMN2qm5RPslUY5gKU6DL1nyVBD4curtiJKaYH6-4HqUiUUnNZM7y5koPM4SJPboCu_DNst8BQURf2w10mRCClNtJvX_WSMiJgg-w/s1600/download-cropped.png',
+
     // Docker
     'https://blogger.googleusercontent.com/img/a/AVvXsEizjjxH3lz3WbtI6fwCzpoUtJqjD3pdRreUFz06rOW-UvOaLRNFzoxJ6Hh61eOVyb4bUWnQ7P8j5TgBEpDDxiCwWwDvHrqUwh7wuQt-vWNnUAA3j5eWGyVG_vIqoB0zd2V1qCR01r5EVwxLHRUHQJPf3cr_cZLm3X_bhbqQ5eCMnWeHLIS-0JMgkA',
 
