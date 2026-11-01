@@ -23,6 +23,8 @@ var appMainData = function () {
             'presetIconsToMain'
         ],
         init: false,
+        // Only used while restoring localStorage; never persisted.
+        restoringSavedState: false,
 
         YouTubeURL: 'https://youtu.be/vXCB1zGGFiY',
         iconURL: 'https://cdn-icons-png.flaticon.com/512/1895/1895657.png',

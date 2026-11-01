@@ -36,7 +36,9 @@ var appMainWatch = {
             this.HistoryIconURL.unshift(url)
         }
 
-        if (this.iconPosition === 0) {
+        // Changing the icon manually reveals it, but loading saved settings
+        // must not overwrite a deliberately selected Hidden (0) position.
+        if (!this.restoringSavedState && this.iconPosition === 0) {
             this.iconPosition = 3
         }
     },

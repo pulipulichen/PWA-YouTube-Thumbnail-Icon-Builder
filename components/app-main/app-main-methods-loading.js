@@ -6,9 +6,15 @@ var appMainMethodsLoading = {
         }
 
         projectFileListData = JSON.parse(projectFileListData)
+        // Vue schedules watchers asynchronously. Keep this flag set until
+        // the iconURL watcher has processed the restored values.
+        this.restoringSavedState = true
         for (let key in projectFileListData) {
             this[key] = projectFileListData[key]
         }
+        this.$nextTick(() => {
+            this.restoringSavedState = false
+        })
     },
     dataSave() {
         if (this.inited === false) {
